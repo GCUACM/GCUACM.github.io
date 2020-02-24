@@ -80,7 +80,7 @@ theme: aria
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@gitee.com:fay_horace/GCUACM.git
+  repository: git@gitee.com:fay_horace/fay_horace.git
   branch: master
 
 search:
