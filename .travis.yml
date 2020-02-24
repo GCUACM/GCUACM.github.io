@@ -7,22 +7,28 @@ cache:
 before_install:
     - npm install hexo-cli -g
 install:
-    - npm install # 安装hexo及插件
+  - npm install
 script:
     - cp hexo-asset-images.js /home/travis/build/GCUACM/GCUACM.github.io/node_modules/hexo-asset-image/index.js
     - hexo clean # 清除
     - hexo g # 生成
 after_script:
-    - cd ./public
-    - git init
+    - hexo clean
+    - hexo generate
     - git config user.name "GCUACM" # 修改name
     - git config user.email "qq1791279681@outlook.com" # 修改email
+    - cd ./public
+    - git init
+    - git remote add origin master https://github.com/GCUACM/GCUACM.github.io
     - git add .
     - git commit -m "Travis CI Auto Builder"
     - git push --force --quiet "https://${Travis}@${GH_REF}" master:master # GH_TOKEN是在Travis中配置token的名称
 branches:
     only:
         - hexo #只监测hexo分支，hexo是我的分支的名称，可根据自己情况设置
+addons:
+  apt:
+    update: true
 env:
     global:
-        - GH_REF: github.com/GCUACM/GCUACM.github.io.git #设置GH_REF，注意更改yourname
+        - GH_REF: github.com/GCUACM/GCUACM.github.io #设置GH_REF，注意更改yourname
