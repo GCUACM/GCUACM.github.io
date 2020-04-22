@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="alternate" href="/atom.xml" title="GCU-ACM" type="application/atom+xml">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/[object Object].css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "Copied";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "Copy";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>必要知识培训 | GCU-ACM - Talk is cheap,show me your code</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">GCU-ACM</a></h1>
+        <h2 class="subtitle">Talk is cheap,show me your code</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/13/190313/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="码到成功">
+       <meta itemprop="description" content="除非你能在床上赚钱，否则就不要赖在床上">
+       <meta itemprop="image" content="/">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="GCU-ACM">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">必要知识培训</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-13T19:30:11+08:00">2019-03-13 19:30:11</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/教学/" itemprop="url" rel="index"><span itemprop="name">教学</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p><img src="/2019/03/13/190313/icpclogo_big.png" width="50%" height="50%"></p>
+<p>ACM必要知识培训</p>
+<hr>
+<p>作者：老陈</p>
+<a id="more"></a>
+<h1 id="常见的比赛相关常识"><a href="#常见的比赛相关常识" class="headerlink" title="常见的比赛相关常识"></a>常见的比赛相关常识</h1><h2 id="CCPC-ICPC"><a href="#CCPC-ICPC" class="headerlink" title="CCPC/ICPC"></a>CCPC/ICPC</h2><p>CCPC是国内的，ICPC是国际的（China &amp; International Collegiate Programming Contest）</p>
+<h2 id="各种测试结果的简称"><a href="#各种测试结果的简称" class="headerlink" title="各种测试结果的简称"></a>各种测试结果的简称</h2><table>
+<thead>
+<tr>
+<th>Wrong Answer：WA</th>
+<th>Time Limit Exceeded：TLE/T</th>
+<th>Memory Limit Exceeded：MLE/M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accepted：AC</td>
+<td>Compile Error：CE</td>
+<td>Runtime Error：RE</td>
+</tr>
+<tr>
+<td>Presentation Error：PE</td>
+<td>……</td>
+</tr>
+</tbody>
+</table>
+<h2 id="OI-NOI-NOIP-CTSC"><a href="#OI-NOI-NOIP-CTSC" class="headerlink" title="OI/NOI/NOIP/CTSC"></a>OI/NOI/NOIP/CTSC</h2><p>OI是中学生信息学竞赛，NOI/NOIP/CTSC是省级竞赛、国级竞赛、国家队选拔赛的简称。不做过多介绍</p>
+<h2 id="AK"><a href="#AK" class="headerlink" title="AK"></a>AK</h2><p>即All Kill，也就是把本场比赛的题目全部AC。</p>
+<h2 id="爆零"><a href="#爆零" class="headerlink" title="爆零"></a>爆零</h2><p>即0 AC，也就是本场比赛一道题都没有通过。</p>
+<h2 id="Tx"><a href="#Tx" class="headerlink" title="Tx"></a>Tx</h2><p>第几题的意思。例如T3就是第三题。</p>
+<p>还有很多……</p>
+<h1 id="关于限时与内存"><a href="#关于限时与内存" class="headerlink" title="关于限时与内存"></a>关于限时与内存</h1><h2 id="限时"><a href="#限时" class="headerlink" title="限时"></a>限时</h2><p>记住一个点：测评姬1s可以计算$10^8$次！所以你可以通过计算时间复杂度估计出计算次数就可以大致知道会不会超时。</p>
+<h2 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h2><p>内存比较玄乎。</p>
+<p>不过注意：数组开成全局变量！</p>
+<p>对于128M的内存限制，能开$3.3 × 10^8$的数组。</p>
+<h1 id="常见失误"><a href="#常见失误" class="headerlink" title="常见失误"></a>常见失误</h1><h2 id="运算溢出"><a href="#运算溢出" class="headerlink" title="运算溢出"></a>运算溢出</h2><p>例：输入a和b，计算a+b。（$0 ≤ 𝑎, 𝑏 ≤ 2 × 10^9$）</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">int</span> a, b; <br><span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;a, &amp;b); <br><span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d"</span>, a + b);<br></code></pre></td></tr></table></figure>
+<p>很明显，当a和b都为$2 × 10^9$时，结果是超过了int的存储范围的。所以我们需要使用<code>long long</code>才存储结果（输出）。</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">int</span> a, b; <br><span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;a, &amp;b); <br><span class="hljs-built_in">printf</span>(“%lld”, (<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>)a + b);<br></code></pre></td></tr></table></figure>
+<h2 id="越界"><a href="#越界" class="headerlink" title="越界"></a>越界</h2><p>RE的最常见原因，其中一个常见原因就是数组开太小了。</p>
+<p>所以养成一个习惯：<strong>开的数组比题目要求的大一点点</strong>。</p>
+<p>例：给定一个字符串，将所有小写字母变成大写字母。（字符串长度≤1000）</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">char</span> s[<span class="hljs-number">1000</span>]; <br><span class="hljs-built_in">cin</span> &gt;&gt; s; <br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">strlen</span>(s); i++) <br>    <span class="hljs-built_in">cout</span> &lt;&lt; (<span class="hljs-keyword">char</span>)<span class="hljs-built_in">toupper</span>(s[i]);<br></code></pre></td></tr></table></figure>
+<p>这份代码会获得RE。（为什么？）</p>
+<p><strong>另外，注意不要访问数组外的内容。（例如int a[10]访问a[10]）</strong></p>
+<h2 id="差一错误"><a href="#差一错误" class="headerlink" title="差一错误"></a>差一错误</h2><p>指大体计算方法正确，但是出现多一个或者少一个的现象，从而引发的答案错误（WA）。</p>
+<p>例：给定数组，求某一区间[x,y]内所有元素的平均值。</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = x; i &lt;= y; i++)<br>    sum += num[i];<br><span class="hljs-built_in">cout</span> &lt;&lt; (<span class="hljs-keyword">double</span>)sum / (y - x);<br></code></pre></td></tr></table></figure>
+<p>很明显，这里应该除的是<code>y-x+1</code>，不是<code>y-x</code>。</p>
+<h2 id="栈溢出"><a href="#栈溢出" class="headerlink" title="栈溢出"></a>栈溢出</h2><p>栈溢出常常是由递归调用的嵌套层数过多引发的。</p>
+<p><strong>超过$10^4$层的递归就不要写了。</strong></p>
+<p>例：计算斐波那契数列第n项的值。（$1≤n≤10^6,$ 答案对$10^7 + 7$取模）</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> mod 10000007</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> ll;<br><span class="hljs-function">ll <span class="hljs-title">F</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span><br></span>&#123;<br>    <span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span> || n == <span class="hljs-number">2</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">return</span> (F(n - <span class="hljs-number">1</span>) + F(n - <span class="hljs-number">2</span>)) % mod;<br><br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-built_in">cout</span> &lt;&lt; F(n) % mod;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p>看书本后面的优先级，不再赘述。</p>
+<h2 id="初始化-重置变量"><a href="#初始化-重置变量" class="headerlink" title="初始化/重置变量"></a>初始化/重置变量</h2><p>对于多组输入，应该对上一组使用的数组等变量进行清空。</p>
+<p>对于程序中的变量，养成习惯进行初始化。</p>
+<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p>时间复杂度是衡量一个算法速度的标准。</p>
+<h2 id="例1："><a href="#例1：" class="headerlink" title="例1："></a>例1：</h2><figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)  num++;<br></code></pre></td></tr></table></figure>
+<p>我们会发现，这个循环的计算次数与n的大小有关（n是多少，num++就进行多少次）。所以这个循环的复杂度为<code>O(n)</code>。</p>
+<h2 id="例2："><a href="#例2：" class="headerlink" title="例2："></a>例2：</h2><figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-built_in">cout</span> &lt;&lt; n &lt;&lt; <span class="hljs-built_in">endl</span>;<br></code></pre></td></tr></table></figure>
+<p>这个句子只是个简单的输出语句，无论n多大，这个语句都只执行一次。所以这个循环的复杂度为<code>O(1)</code>。</p>
+<h2 id="例3："><a href="#例3：" class="headerlink" title="例3："></a>例3：</h2><figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)<br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++)<br>		num[i][j] = i * j;<br></code></pre></td></tr></table></figure>
+<p>这段代码我们发现，当i为某一个值时，第二层循环就会执行n次。而i的范围为<code>0-n-1</code>。即外层循环执行n次，内层循环执行m次。那么我们可以算出这个循环的计算次数为$𝑛 ^2$次，所以这段代码的时间复杂度为$O(𝑛^2)$。</p>
+<h2 id="例4："><a href="#例4：" class="headerlink" title="例4："></a>例4：</h2><figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i *= <span class="hljs-number">2</span>)  <br>    res *= i;<br></code></pre></td></tr></table></figure>
+<p>这个循环的计算次数是多少呢？我们尝试列个表：</p>
+<table>
+<thead>
+<tr>
+<th><strong>i</strong></th>
+<th><strong>1</strong></th>
+<th><strong>2</strong></th>
+<th><strong>3</strong></th>
+<th><strong>4</strong></th>
+<th><strong>5</strong></th>
+<th><strong>6</strong></th>
+<th><strong>7</strong></th>
+<th><strong>8</strong></th>
+<th><strong>9</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td>2</td>
+<td>4</td>
+<td>8</td>
+<td>16</td>
+<td>32</td>
+<td>64</td>
+<td>128</td>
+<td>256</td>
+<td>512</td>
+</tr>
+</tbody>
+</table>
+<p>你会发现：若循环至少执行x次，那么n至少为$2^𝑥$。</p>
+<p>那么我们可以得到：这段代码的时间复杂度为$O(log2𝑛)$</p>
+<p>特殊的，对于2为底的对数，我们可以省略不写，即$O(log𝑛)$。</p>
+<p><strong>很多函数的时间复杂度也需要记忆，做题时最好计算次数以保证不会超时后再提交，避免不必要的罚时。</strong></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>嵌套的循环总复杂度为各层复杂度相乘。不嵌套的语句复杂度为相加，忽略系数，仅保留最大项。</p>
+<p>例如有段代码是这样的：</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n * <span class="hljs-number">2</span>; i++) <br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) <br>        num[<span class="hljs-number">1</span>][j] = i * j;<br><br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) <br>    sort(vis, vis + n);<br><br><span class="hljs-built_in">cout</span> &lt;&lt; res &lt;&lt; <span class="hljs-string">" "</span>; <br><span class="hljs-built_in">cout</span> &lt;&lt; num[n<span class="hljs-number">-1</span>][n<span class="hljs-number">-1</span>];<br></code></pre></td></tr></table></figure>
+<p>我们可以看到，一开始有个两层的嵌套循环。第一层复杂度为$O(𝑛) $（注意忽略系数），第二层为$O(n)$。那么这个循环的总复杂度为$O(𝑛^2)$。</p>
+<p>接下来一个$O(n)$的循环内调用了sort函数，sort函数的复杂度$O(𝑛logn)$，所以这段代码的复杂度为$O(𝑛^2log𝑛)$。最后两行输出语句复杂度均为O(1)。那么总复杂度相加，为$O(𝑛^2log𝑛+2)$，保留最大项，忽略系数，我们得到了最终的复杂度：$O(𝑛^2log𝑛)​$。</p>
+<p>我们看一下下面的代码，计算一下时间复杂度：</p>
+<p><img src="/2019/03/13/190313/1.png" alt></p>
+<h2 id="最差情况、最优情况、平均与均摊复杂度"><a href="#最差情况、最优情况、平均与均摊复杂度" class="headerlink" title="最差情况、最优情况、平均与均摊复杂度"></a>最差情况、最优情况、平均与均摊复杂度</h2><p>最差/最优情况：代码在最糟糕/最理想的情况下的时间复杂度。</p>
+<p>以数组查询为例：</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr_len; i++) <br>    <span class="hljs-keyword">if</span> (num[i] == x)<br>		<span class="hljs-keyword">return</span> i;<br><span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br></code></pre></td></tr></table></figure>
+<p>这段代码<strong>最差情况</strong>为x不存在与数组num中，此时这段代码的时间复杂度为<code>O(n)</code>。</p>
+<p><strong>最优情况</strong>是第一个数就是x，此时这段代码的时间复杂度为<code>O(1)</code>。</p>
+<p><strong>平均复杂度：</strong>代码在所有情况下的平均时间复杂度。</p>
+<p><strong>均摊复杂度：</strong>代码在大部分情况下出现的时间复杂度。</p>
+<p>例如：我现在有个长度为n的数组，如果数组没满，我就向数组内插入一个数；如果满了，我就计算数组的所有元素的和。</p>
+<p>我们可以得到平均复杂度为$O(\frac{n-1+n}{n})=O(n)$，而均摊复杂度是$O(1)$。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2018/12/14/18-19new/" rel="next" title="18-19学年码到成功ACM集训队招新"><i class="fas fa-angle-left"></i><span class="nav-title">18-19学年码到成功ACM集训队招新</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2019/03/18/190318/" rel="prev" title="扩展欧几里得算法与丢番图方程"><span class="nav-title">扩展欧几里得算法与丢番图方程</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control">
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <h1 class="author-name">码到成功</h1>
+  <h2 class="author-description">除非你能在床上赚钱，否则就不要赖在床上</h2>
+  <div class="site-count">
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#常见的比赛相关常识"><span class="toc-text">常见的比赛相关常识</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#CCPC-ICPC"><span class="toc-text">CCPC/ICPC</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#各种测试结果的简称"><span class="toc-text">各种测试结果的简称</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#OI-NOI-NOIP-CTSC"><span class="toc-text">OI/NOI/NOIP/CTSC</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#AK"><span class="toc-text">AK</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#爆零"><span class="toc-text">爆零</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#Tx"><span class="toc-text">Tx</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#关于限时与内存"><span class="toc-text">关于限时与内存</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#限时"><span class="toc-text">限时</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#内存"><span class="toc-text">内存</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#常见失误"><span class="toc-text">常见失误</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#运算溢出"><span class="toc-text">运算溢出</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#越界"><span class="toc-text">越界</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#差一错误"><span class="toc-text">差一错误</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#栈溢出"><span class="toc-text">栈溢出</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#优先级"><span class="toc-text">优先级</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#初始化-重置变量"><span class="toc-text">初始化/重置变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#时间复杂度"><span class="toc-text">时间复杂度</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#例1："><span class="toc-text">例1：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#例2："><span class="toc-text">例2：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#例3："><span class="toc-text">例3：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#例4："><span class="toc-text">例4：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#总结"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#最差情况、最优情况、平均与均摊复杂度"><span class="toc-text">最差情况、最优情况、平均与均摊复杂度</span></a></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">码到成功</span><span class="year"><i class="far fa-copyright"></i>2020</span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

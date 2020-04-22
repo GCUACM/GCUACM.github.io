@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="alternate" href="/atom.xml" title="GCU-ACM" type="application/atom+xml">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/[object Object].css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "Copied";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "Copy";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>队列与BFS | GCU-ACM - Talk is cheap,show me your code</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">GCU-ACM</a></h1>
+        <h2 class="subtitle">Talk is cheap,show me your code</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/23/queue-BFS/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="码到成功">
+       <meta itemprop="description" content="除非你能在床上赚钱，否则就不要赖在床上">
+       <meta itemprop="image" content="/">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="GCU-ACM">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">队列与BFS</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-06-23T19:36:59+08:00">2018-06-23 19:36:59</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/教学/" itemprop="url" rel="index"><span itemprop="name">教学</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>2018.6.23集训内容</p>
+<hr>
+<p>作者：吴兆恒</p>
+<a id="more"></a>
+<h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1><h2 id="队列是什么"><a href="#队列是什么" class="headerlink" title="队列是什么"></a>队列是什么</h2><p>队列是一种特殊的线性表. 是一种先进先出的数据结构. 它只允许表的前端进行删除操作, 对表的后端进行插入操作.</p>
+<p>把队列想象成生活中的排队即可. 例如在商场最后结账的时候, 服务员在前面进行结账操作. 顾客从后面走进去 (相当于从后端插入) 走到进去服务员那里结账完以后离开(相当于从前端删除) 如果有多个顾客在排队, 那么新加入的顾客就排在他们后面 直到轮到他才离开（后进后出）</p>
+<p><img src="/2018/06/23/queue-BFS/bfs7.png" style="zoom:50%"></p>
+<h2 id="队列的使用"><a href="#队列的使用" class="headerlink" title="队列的使用"></a>队列的使用</h2><h3 id="队列的定义"><a href="#队列的定义" class="headerlink" title="队列的定义"></a>队列的定义</h3><p>在c++的STL中有队列相关的头文件, 使用了以后就能直接定义一个队列了. 当然这个头文件不仅仅只有queue 还有<br>很多 这个以后再说</p>
+<p><code>#include &lt;queue&gt;</code></p>
+<p><del>除了直接使用头文件, 也可以自己使用数组模拟一个队列出来. 据说性能会比stl更好（ 而且毕竟手写能够自己对需求进行改变. 但现在不对手写的进行说明 有兴趣可以去搜相关的资料</del></p>
+<p>那么写了头文件后怎么定义一个队列呢 语句是这样的</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-built_in">queue</span>&lt;type&gt; name<br><span class="hljs-comment">//定义一个int类型的队列 后面会拿这个当例子使用</span><br><span class="hljs-built_in">queue</span>&lt;<span class="hljs-keyword">int</span>&gt; q<br></code></pre></td></tr></table></figure>
+<p>type 是类型的意思 可以替换成你想指定的类型 例如int double等 而name就是名字 这个就看个人喜欢</p>
+<p><strong>使用stl现成的队列, 队列会带有多种方法. 例如插入删除等 下面介绍每种的使用方法</strong></p>
+<h3 id="队列的插入"><a href="#队列的插入" class="headerlink" title="队列的插入"></a>队列的插入</h3><p>插入, 正确的说法应该是入列 通过使用队列中的<code>push</code>方法 通过变量名加圆点(.) 调用方法</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++">q.push(<span class="hljs-number">1</span>); <span class="hljs-comment">// 把元素1 放进队列中</span><br>q.push(<span class="hljs-number">2</span>); <span class="hljs-comment">// 如上</span><br>q.push(<span class="hljs-number">3</span>); <span class="hljs-comment">// same</span><br></code></pre></td></tr></table></figure>
+<h3 id="队列的删除"><a href="#队列的删除" class="headerlink" title="队列的删除"></a>队列的删除</h3><p>出列使用的方法是<code>pop</code> 这个方法不需要任何参数 使用该方法后将自动返回队列中最前面的元素</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++">q.pop(); <span class="hljs-comment">// 队列中最前面的元素1已经被删除掉了</span><br></code></pre></td></tr></table></figure>
+<h3 id="访问队列第一个元素"><a href="#访问队列第一个元素" class="headerlink" title="访问队列第一个元素"></a>访问队列第一个元素</h3><p>front方法能让我们直接得到队列中第一个元素</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">int</span> temp = q.front(); <span class="hljs-comment">// temp变量被赋值成2 因为上面的pop操作已经把最先1删除掉了</span><br></code></pre></td></tr></table></figure>
+<h3 id="访问队列最后一个元素"><a href="#访问队列最后一个元素" class="headerlink" title="访问队列最后一个元素"></a>访问队列最后一个元素</h3><p><code>back</code>方法能让我们获得队列中最后一个元素</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++">temp = q.back(); <span class="hljs-comment">// temp变量将被赋值成3</span><br></code></pre></td></tr></table></figure>
+<h3 id="获得队列元素个数"><a href="#获得队列元素个数" class="headerlink" title="获得队列元素个数"></a>获得队列元素个数</h3><p><code>size</code>方法将返回队列中的元素个数</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">int</span> count = q.size(); <span class="hljs-comment">// count变量将会是2</span><br></code></pre></td></tr></table></figure>
+<h3 id="判断队列是否为空"><a href="#判断队列是否为空" class="headerlink" title="判断队列是否为空"></a>判断队列是否为空</h3><p><code>empty</code>方法是用来告知队列是否为空 如果队列是空的时候 将返回<code>true</code> 反之则<code>false</code></p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">if</span>(!q.empty()) <span class="hljs-comment">// 因为队列不为空 所以将会输出123</span><br>&#123;<br><span class="hljs-built_in">printf</span>(<span class="hljs-string">"123"</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p><code>size</code>和<code>empty</code>这两个方法 通常用在循环条件上. 当队列元素数量为0 / 队列是空(两者等价)的时候 跳出循环</p>
+<h1 id="广度优先搜索（bfs）"><a href="#广度优先搜索（bfs）" class="headerlink" title="广度优先搜索（bfs）"></a>广度优先搜索（bfs）</h1><h2 id="bfs是什么"><a href="#bfs是什么" class="headerlink" title="bfs是什么"></a>bfs是什么</h2><p>bfs是一种图的搜索算法. 是一种盲目搜寻的方法. 换句话说就是暴力. 通过不断的展开直到搜索完整张图</p>
+<h2 id="bfs的使用"><a href="#bfs的使用" class="headerlink" title="bfs的使用"></a>bfs的使用</h2><p>bfs一般都会通过队列实现, 为什么要用到队列. 就关乎到队列的先进先出这个特点了.</p>
+<h3 id="bfs是怎么跑的"><a href="#bfs是怎么跑的" class="headerlink" title="bfs是怎么跑的"></a>bfs是怎么跑的</h3><p>拿走迷宫作为例子, 一个人在迷宫中只能上下左右的行走, 如果是障碍则不能通过 如图</p>
+<p><img src="/2018/06/23/queue-BFS/bfs.png" style="zoom:50%"></p>
+<p>圈圈就是起点 点是可以走的道路<code>X</code>代表路障<code>*</code>代表目的地<br>那么从起点开始进行bfs 第一轮进行搜索就是碰到圈圈上下左右的点 （假设顺序是从上右下左）<br>那么最先碰到的是上方的点 并把上面的点记录 放进队列中</p>
+<p><img src="/2018/06/23/queue-BFS/bfs2.png" style="zoom:50%"></p>
+<p>然后继续右，下，左 发现是可以走的路 以此 <strong>放进队列中</strong></p>
+<p><img src="/2018/06/23/queue-BFS/bfs3.png" height="50%" width="50%"></p>
+<p>接下来 因为队列中所存放的都是可以走的路嘛 拿出队列中的第一个元素 （因为是要最先放进的） 搜索这个点的上下左右 会发现 左右是障碍走不了 下是起点 已经走过了不能再走 那就只能走上了. 并把上方的点放进队列中</p>
+<p><img src="/2018/06/23/queue-BFS/bfs4.png" height="50%" width="50%"></p>
+<p>在这个操作以后, 接着把队列中的元素出列 他们会是之前原点所插入的”右下左” 都进行搜索后会发现图变成这样了<br>（突然多了红色只是为了方便下文说明 并没有对他什么特别操作）</p>
+<p><img src="/2018/06/23/queue-BFS/bfs5.png" height="50%" width="50%"></p>
+<p>接下来 队列出列的元素就是红色标记的点了. 搜索后就会发现目的地 到达终点 直接break跳出循环 bfs结束</p>
+<h2 id="bfs使用例子"><a href="#bfs使用例子" class="headerlink" title="bfs使用例子"></a>bfs使用例子</h2><p>拿<a href="https://www.luogu.org/problemnew/show/P1683" target="_blank" rel="noopener">luoguP1683</a>举例 把数据和整个迷宫读入后. 通过遍历找出起点@的位置</p>
+<p><img src="/2018/06/23/queue-BFS/bfs6.png" alt></p>
+<p>容易发现 起点的坐标为（4，6）（下标从0开始计算） 把起点送进队列中</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;queue&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">node</span><br>&#123;</span><br>	<span class="hljs-keyword">int</span> x,y;<br>&#125;;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>	<span class="hljs-keyword">int</span> n,m;<br>	<span class="hljs-keyword">char</span> s[<span class="hljs-number">20</span>][<span class="hljs-number">21</span>] = &#123;&#125;; <span class="hljs-comment">// 之所以开21是因为要考虑最后的'\0'</span><br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d"</span>,&amp;n,&amp;m); <span class="hljs-comment">//读入迷宫大小</span><br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; m;i ++) <span class="hljs-comment">// 把迷宫读入数组</span><br>	&#123;<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>,s[i]);<br>	&#125;<br>	<span class="hljs-keyword">int</span> x,y; <span class="hljs-comment">// 用来记录起点的坐标</span><br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; m;i ++)<br>	&#123;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j &lt; n;j ++)<br>	&#123;<br>	<span class="hljs-keyword">if</span>(s[i][j] == <span class="hljs-string">'@'</span>)<br>	&#123;<br>		x = i,y = j;<br>		<span class="hljs-keyword">break</span>;<br>	&#125;<br>&#125;<br>&#125;<br>	<span class="hljs-built_in">queue</span>&lt;node&gt; q; <span class="hljs-comment">// 定义一个以结构体node为类型的队列</span><br>	node a = &#123;x,y&#125;;<br>	q.push(a); <span class="hljs-comment">// 把起点放进队列中</span><br>    <span class="hljs-comment">// 请勿直接复制使用 已删除main函数后大括号 因为后续还有代码</span><br></code></pre></td></tr></table></figure>
+<p>之所以要弄一个结构体node 是因为要保存bfs每一步的所在的位置 (也可以使用pair) 但是结构体都学过 pair以后再讲</p>
+<p>接下来就是bfs算法的具体代码 一直循环进行直到整个迷宫探索结束</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">int</span> dx[<span class="hljs-number">4</span>] = &#123;<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>&#125;;<br><span class="hljs-keyword">int</span> dy[<span class="hljs-number">4</span>] = &#123;<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>&#125;; <span class="hljs-comment">// 代表走上左右下的时候坐标的变化</span><br><span class="hljs-keyword">int</span> count = <span class="hljs-number">1</span>; <span class="hljs-comment">// 用这个变量记录走过的砖块数量</span><br><span class="hljs-keyword">int</span> visited[<span class="hljs-number">20</span>][<span class="hljs-number">21</span>] = &#123;&#125;; <span class="hljs-comment">// 需要一个数组记录走过的路线避免重复走而死循环了 因为想想, 如果从某个点搜索</span><br>向上走了以后, 走到的那个点再向下走 这不就是一个死循环了吗<br>visited[x][y] = <span class="hljs-number">1</span>; <span class="hljs-comment">// 把起点记录下</span><br><span class="hljs-keyword">while</span>(q.size()) <span class="hljs-comment">// 用empty也可以</span><br>&#123;<br>	node t = q.front(); <span class="hljs-comment">// 把队列中第一个元素拿出来(刚开始的时候也就是起点)</span><br>	q.pop();<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">4</span>;i ++)<br>	&#123;<br>		<span class="hljs-keyword">int</span> nx = t.x + dx[i];<br>		<span class="hljs-keyword">int</span> ny = t.y + dy[i]; <span class="hljs-comment">// 算出该点的上下左右的新坐标</span><br>	<span class="hljs-comment">// 前面4个条件是防止越界 第5个条件是要求只有没走过的路才能进入条件 第6个条件是 所走的地点不能是障碍</span><br>		<span class="hljs-keyword">if</span>(nx &gt;= <span class="hljs-number">0</span> &amp;&amp; nx &lt; m &amp;&amp; ny &gt;= <span class="hljs-number">0</span> &amp;&amp; ny &lt; n &amp;&amp; visited[nx][ny] == <span class="hljs-number">0</span> &amp;&amp; s[nx][ny] != <span class="hljs-string">'#'</span>)<br>		&#123;<br>			visited[nx][ny] = <span class="hljs-number">1</span>; <span class="hljs-comment">// 记录为已经走过了</span><br>			count ++; <span class="hljs-comment">// 增加走过的砖块个数</span><br>			node a = &#123;nx,ny&#125;; <span class="hljs-comment">// 新建新的元素 放进队列中</span><br>			q.push(a);<br>		&#125;<br>	&#125;<br>&#125;<br><span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d"</span>,count);<br><span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">// 先把前半段代码复制过去 再复制这段过去即可运行了</span><br></code></pre></td></tr></table></figure>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/队列/" rel="tag"><i class="fas fa-tags"></i>队列</a>
+        
+        <a class="post-tag button" href="/tags/BFS/" rel="tag"><i class="fas fa-tags"></i>BFS</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2018/06/23/luogu/" rel="prev" title="洛谷训练题目讲解"><span class="nav-title">洛谷训练题目讲解</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control">
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <h1 class="author-name">码到成功</h1>
+  <h2 class="author-description">除非你能在床上赚钱，否则就不要赖在床上</h2>
+  <div class="site-count">
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#队列"><span class="toc-text">队列</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#队列是什么"><span class="toc-text">队列是什么</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#队列的使用"><span class="toc-text">队列的使用</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#队列的定义"><span class="toc-text">队列的定义</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#队列的插入"><span class="toc-text">队列的插入</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#队列的删除"><span class="toc-text">队列的删除</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#访问队列第一个元素"><span class="toc-text">访问队列第一个元素</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#访问队列最后一个元素"><span class="toc-text">访问队列最后一个元素</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#获得队列元素个数"><span class="toc-text">获得队列元素个数</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#判断队列是否为空"><span class="toc-text">判断队列是否为空</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#广度优先搜索（bfs）"><span class="toc-text">广度优先搜索（bfs）</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#bfs是什么"><span class="toc-text">bfs是什么</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#bfs的使用"><span class="toc-text">bfs的使用</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#bfs是怎么跑的"><span class="toc-text">bfs是怎么跑的</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#bfs使用例子"><span class="toc-text">bfs使用例子</span></a></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">码到成功</span><span class="year"><i class="far fa-copyright"></i>2020</span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

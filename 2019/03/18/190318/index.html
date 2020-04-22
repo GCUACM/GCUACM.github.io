@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="alternate" href="/atom.xml" title="GCU-ACM" type="application/atom+xml">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/[object Object].css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "Copied";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "Copy";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>扩展欧几里得算法与丢番图方程 | GCU-ACM - Talk is cheap,show me your code</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">GCU-ACM</a></h1>
+        <h2 class="subtitle">Talk is cheap,show me your code</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/18/190318/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="码到成功">
+       <meta itemprop="description" content="除非你能在床上赚钱，否则就不要赖在床上">
+       <meta itemprop="image" content="/">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="GCU-ACM">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">扩展欧几里得算法与丢番图方程</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-18T19:31:26+08:00">2019-03-18 19:31:26</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/教学/" itemprop="url" rel="index"><span itemprop="name">教学</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>扩展欧几里得算法与丢番图方程</p>
+<hr>
+<p>作者：老陈</p>
+<a id="more"></a>
+<h1 id="回顾GCD"><a href="#回顾GCD" class="headerlink" title="回顾GCD"></a>回顾GCD</h1><p><img src="/2019/03/18/190318/gcd.png" alt></p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> ll;<br><span class="hljs-function">ll <span class="hljs-title">gcd</span><span class="hljs-params">(ll a, ll b)</span><br></span>&#123;<br>    <span class="hljs-keyword">return</span> b ? gcd(b, a%b) : a;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function">ll <span class="hljs-title">gcd</span><span class="hljs-params">(ll a, ll b)</span><br></span>&#123;<br>	<span class="hljs-keyword">while</span> (b)<br>	&#123;<br>		a %= b;<br>		swap(a, b);<br>	&#125;<br>	<span class="hljs-keyword">return</span> a;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="扩展GCD"><a href="#扩展GCD" class="headerlink" title="扩展GCD"></a>扩展GCD</h1><p><img src="/2019/03/18/190318/exgcd.jpg" alt></p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">//此算法即可求出gcd(a,b)，也可求出x和y</span><br><span class="hljs-comment">//当 gcd(a,b)=d 时，求绝对值和最小的x,y使得xa+yb=d 。</span><br><span class="hljs-function">ll <span class="hljs-title">ex_gcd</span><span class="hljs-params">(ll a, ll b, ll &amp;x, ll &amp;y)</span><br></span>&#123;<br>	<span class="hljs-keyword">if</span> (b &gt; a)<br>		<span class="hljs-keyword">return</span> ex_gcd(b, a, y, x);<br>	<span class="hljs-keyword">if</span> (b == <span class="hljs-number">0</span>)<br>	&#123;<br>		x = <span class="hljs-number">1</span>;<br>		y = <span class="hljs-number">0</span>;<br>		<span class="hljs-keyword">return</span> a;<br>	&#125;<br>	<span class="hljs-keyword">else</span><br>	&#123;<br>		ll x1, y1;<br>		ll res = ex_gcd(b, a%b, x1, y1);<br>		x = y1;<br>		y = x1 - a / b * y1;<br>		<span class="hljs-keyword">return</span> res;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p><strong>注意到达结束条件时，有<code>gcd(a,0) = 1*a+0*b,即(x,y)=(1,0)</code></strong></p>
+<h1 id="丢番图方程"><a href="#丢番图方程" class="headerlink" title="丢番图方程"></a>丢番图方程</h1><p><strong>定义：含有两个未知量𝑥, 𝑦且形如𝑎𝑥 + 𝑏𝑦 = 𝑐的方程。</strong></p>
+<p>我们本次要讨论的问题:</p>
+<ol>
+<li>寻找方程的一个解</li>
+<li>寻找方程的所有解（通解）</li>
+<li>寻找方程的在某区间内的解及解的个数</li>
+<li>寻找方程的解中 x+y 的最小值</li>
+</ol>
+<p><em>我们将忽略𝑎 = 𝑏 = 0的情形，因为这种情况下不是无穷多解就是无解。（取决于𝑐的取值）</em></p>
+<h2 id="丢番图方程——寻找一个解"><a href="#丢番图方程——寻找一个解" class="headerlink" title="丢番图方程——寻找一个解"></a>丢番图方程——寻找一个解</h2><p><img src="/2019/03/18/190318/dft1.jpg" alt></p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">find_any_solution</span><span class="hljs-params">(ll a, ll b, ll c, ll &amp;x0, ll &amp;y0, ll &amp;g)</span><br></span>&#123;<br>	g = ex_gcd(<span class="hljs-built_in">abs</span>(a), <span class="hljs-built_in">abs</span>(b), x0, y0);<br>	<span class="hljs-keyword">if</span> (c % g)<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>	x0 *= c / g;<br>	y0 *= c / g;<br>	<span class="hljs-keyword">if</span> (a &lt; <span class="hljs-number">0</span>) x0 = -x0;<br>	<span class="hljs-keyword">if</span> (b &lt; <span class="hljs-number">0</span>) y0 = -y0;<br>	<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="丢番图方程——寻找所有解（通解）"><a href="#丢番图方程——寻找所有解（通解）" class="headerlink" title="丢番图方程——寻找所有解（通解）"></a>丢番图方程——寻找所有解（通解）</h2><p><img src="/2019/03/18/190318/dft2.jpg" alt></p>
+<p><img src="/2019/03/18/190318/dft3.jpg" alt></p>
+<p><img src="/2019/03/18/190318/dft4.jpg" alt></p>
+<h2 id="丢番图方程——寻找方程的在某区间内的解及解的个数"><a href="#丢番图方程——寻找方程的在某区间内的解及解的个数" class="headerlink" title="丢番图方程——寻找方程的在某区间内的解及解的个数"></a>丢番图方程——寻找方程的在某区间内的解及解的个数</h2><p><img src="/2019/03/18/190318/dft5.jpg" alt></p>
+<p><img src="/2019/03/18/190318/dft6.jpg" alt></p>
+<h2 id="例题：Romantic（HDU-2669）"><a href="#例题：Romantic（HDU-2669）" class="headerlink" title="例题：Romantic（HDU 2669）"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2669" target="_blank" rel="noopener">例题：Romantic（HDU 2669）</a></h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><img src="/2019/03/18/190318/dft7.jpg" alt></p>
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>很明显，本题需要使用扩展欧几里得算法来解决</p>
+<p>有解的条件？</p>
+<p>如何获得𝑋 &gt; 0的最小解？</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>	<span class="hljs-keyword">int</span> a, b;<br>	ll x, y;<br>	<span class="hljs-keyword">while</span> (~<span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d"</span>, &amp;a, &amp;b))<br>	&#123;<br>		<span class="hljs-keyword">int</span> d = ex_gcd(a, b, x, y);<br>		<span class="hljs-keyword">if</span> (d != <span class="hljs-number">1</span>)<br>		&#123;<br>			<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"sorry"</span> &lt;&lt; <span class="hljs-built_in">endl</span>;<br>			<span class="hljs-keyword">continue</span>;<br>		&#125;<br>		<span class="hljs-keyword">while</span> (x &lt;= <span class="hljs-number">0</span>)<br>		&#123;<br>			x = x + b;<br>			y = y - a;<br>		&#125;<br>		<span class="hljs-built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="hljs-string">' '</span> &lt;&lt; y &lt;&lt; <span class="hljs-built_in">endl</span>;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="例题2：Get-AC-in-one-go（Codechef）"><a href="#例题2：Get-AC-in-one-go（Codechef）" class="headerlink" title="例题2：Get AC in one go（Codechef）"></a><a href="https://www.codechef.com/problems/COPR16G" target="_blank" rel="noopener">例题2：Get AC in one go（Codechef）</a></h2><h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p><img src="/2019/03/18/190318/dft8.jpg" alt></p>
+<h3 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h3><p>代码中<code>a * b - a - b</code>的证明：</p>
+<p><a href="https://artofproblemsolving.com/wiki/index.php/Chicken_McNugget_Theorem" target="_blank" rel="noopener">https://artofproblemsolving.com/wiki/index.php/Chicken_McNugget_Theorem</a></p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>	<span class="hljs-keyword">int</span> t;<br>	<span class="hljs-keyword">while</span> (~<span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;t))<br>	&#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; t; i++)<br>		&#123;<br>			<span class="hljs-keyword">int</span> a, b;<br>			<span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;a, &amp;b);<br>			<span class="hljs-keyword">int</span> g = gcd(a, b);<br>			<span class="hljs-keyword">if</span> (g == <span class="hljs-number">1</span>)<br>				<span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, a * b - a - b);<br>			<span class="hljs-keyword">else</span><br>				<span class="hljs-built_in">printf</span>(<span class="hljs-string">"-1\n"</span>);<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/数学/" rel="tag"><i class="fas fa-tags"></i>数学</a>
+        
+        <a class="post-tag button" href="/tags/扩展欧几里得/" rel="tag"><i class="fas fa-tags"></i>扩展欧几里得</a>
+        
+        <a class="post-tag button" href="/tags/丢番图方程/" rel="tag"><i class="fas fa-tags"></i>丢番图方程</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/03/13/190313/" rel="next" title="必要知识培训"><i class="fas fa-angle-left"></i><span class="nav-title">必要知识培训</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2019/04/04/190404/" rel="prev" title="LCS&&LIS"><span class="nav-title">LCS&&LIS</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control">
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <h1 class="author-name">码到成功</h1>
+  <h2 class="author-description">除非你能在床上赚钱，否则就不要赖在床上</h2>
+  <div class="site-count">
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#回顾GCD"><span class="toc-text">回顾GCD</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#代码实现"><span class="toc-text">代码实现</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#扩展GCD"><span class="toc-text">扩展GCD</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#丢番图方程"><span class="toc-text">丢番图方程</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#丢番图方程——寻找一个解"><span class="toc-text">丢番图方程——寻找一个解</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#丢番图方程——寻找所有解（通解）"><span class="toc-text">丢番图方程——寻找所有解（通解）</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#丢番图方程——寻找方程的在某区间内的解及解的个数"><span class="toc-text">丢番图方程——寻找方程的在某区间内的解及解的个数</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#例题：Romantic（HDU-2669）"><span class="toc-text">例题：Romantic（HDU 2669）</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#题目"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#解析"><span class="toc-text">解析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#例题2：Get-AC-in-one-go（Codechef）"><span class="toc-text">例题2：Get AC in one go（Codechef）</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#题目-1"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#解析-1"><span class="toc-text">解析</span></a></li></ol></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">码到成功</span><span class="year"><i class="far fa-copyright"></i>2020</span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="alternate" href="/atom.xml" title="GCU-ACM" type="application/atom+xml">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/[object Object].css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "Copied";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "Copy";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>2018年蓝桥杯校内题选讲 | GCU-ACM - Talk is cheap,show me your code</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">GCU-ACM</a></h1>
+        <h2 class="subtitle">Talk is cheap,show me your code</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/07/18lanqiaobei/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="码到成功">
+       <meta itemprop="description" content="除非你能在床上赚钱，否则就不要赖在床上">
+       <meta itemprop="image" content="/">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="GCU-ACM">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">2018年蓝桥杯校内题选讲</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-12-07T19:36:59+08:00">2018-12-07 19:36:59</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/教学/" itemprop="url" rel="index"><span itemprop="name">教学</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>第2题 矩形面积交，第3题 最小公倍数，第4题 打水问题, 第5题 密码发生器, 第7题 学霸的迷宫</p>
+<hr>
+<p>作者：肖锐、吴兆恒</p>
+<a id="more"></a>
+<h1 id="第2题-矩形面积交"><a href="#第2题-矩形面积交" class="headerlink" title="第2题 矩形面积交"></a>第2题 矩形面积交</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>平面上有两个矩形，它们的边平行于直角坐标系的X轴或Y轴。对于每个矩形，我们给出它的一对相对顶点的坐标，请你编程算出两个矩形的交的面积。</p>
+<p><strong>输入格式</strong><br>输入仅包含两行，每行描述一个矩形。<br>在每行中，给出矩形的一对相对顶点的坐标，每个点的坐标都用两个绝对值不超过10^7的实数表示。</p>
+<p><strong>输出格式</strong><br>输出仅包含一个实数，为交的面积，保留到小数后两位。</p>
+<p><strong>样例输入</strong><br>1 1 3 3<br>2 2 4 4</p>
+<p><strong>样例输出</strong><br>1.00<br>`<br><em>题目可提交于<a href="http://acm.hdu.edu.cn/showproblem.php?pid=2056" target="_blank" rel="noopener">HDU2056 Rectangles</a></em></p>
+<h2 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h2><p><img src="/2018/12/07/18lanqiaobei/1.png" alt></p>
+<p>可以看出，两个矩形交叉的部分（如果有）也是一个矩形，只需要知道交叉部分矩形的长和宽，就可以求出交叉部分的面积了。给出的8个数字是两个矩形左下角、右上角共计4个点的坐标，可以用它们求出交叉部分矩形的长和宽。</p>
+<p>接着则是求出y和x，那么如何求出y和x呢</p>
+<p><img src="/2018/12/07/18lanqiaobei/2.png" alt></p>
+<p>现在以求y为例子，我们通过上面的图可以发现，<code>(y2-y1)+(y3-y4)</code>正好等于<code>(y3-y1+y)</code>，于是我们就有</p>
+<p><code>y=(y2-y1)+(y3-y4)-(y3-y1)</code>，因为给出的坐标不确定哪个大哪个小，所以得加上绝对值，于是就有</p>
+<p><code>y=fabs(y2-y1)+fabs(y3-y4)-(y3-y1)</code>。我们可以发现<code>y3</code>为纵坐标中的最大值而<code>y1</code>为纵坐标中的最小值。</p>
+<p><img src="/2018/12/07/18lanqiaobei/3.png" alt></p>
+<p><img src="/2018/12/07/18lanqiaobei/5.JPG" alt></p>
+<p>通过上面的图，我们发现<code>fabs(y2-y1)+fabs(y3-y4)</code>代表的意义没有变，但是后面不一定是减去<code>y3-y1</code>，而是减去纵坐标中的最大值和纵坐标中的最小值，故有<code>y=fabs(y2-y1)+fabs(y3-y4)-(ymax-ymin)</code>。</p>
+<p>x同理。</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/*<br>Exe.Time: 31MS<br>Submit Time: 2018-12-04 17:26:40	<br>*/</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;algorithm&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cmath&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-keyword">double</span> x[<span class="hljs-number">4</span>], y[<span class="hljs-number">4</span>];<br>    <span class="hljs-keyword">double</span> x1, x2, x3, x4, y1, y2, y3, y4;<br>    <span class="hljs-keyword">while</span>(~<span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%lf%lf%lf%lf%lf%lf%lf%lf"</span><br>         	,&amp;x1, &amp;y1, &amp;x2, &amp;y2, &amp;x3, &amp;y3, &amp;x4, &amp;y4)<br>    &#123;<br>        x[<span class="hljs-number">0</span>] = x1; x[<span class="hljs-number">1</span>] = x2; x[<span class="hljs-number">2</span>] = x3; x[<span class="hljs-number">3</span>] = x4;<br>        y[<span class="hljs-number">0</span>] = y1; y[<span class="hljs-number">1</span>] = y2; y[<span class="hljs-number">2</span>] = y3; y[<span class="hljs-number">3</span>] = y4;<br>        sort(x, x + <span class="hljs-number">4</span>);<br>        sort(y, y + <span class="hljs-number">4</span>);<br>        <span class="hljs-keyword">double</span> Y = <span class="hljs-built_in">fabs</span>(y2-y1) + <span class="hljs-built_in">fabs</span>(y4-y3) - (y[<span class="hljs-number">3</span>]-y[<span class="hljs-number">0</span>]);<br>        <span class="hljs-keyword">double</span> X = <span class="hljs-built_in">fabs</span>(x2-x1) + <span class="hljs-built_in">fabs</span>(x4-x3) - (x[<span class="hljs-number">3</span>]-x[<span class="hljs-number">0</span>]);<br>        <span class="hljs-keyword">double</span> ans = Y * X;<br>        <span class="hljs-keyword">if</span>(Y &lt;= <span class="hljs-number">0</span> || X &lt;= <span class="hljs-number">0</span>)<br>            ans = <span class="hljs-number">0.00</span>;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%0.2lf\n"</span>, ans);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h2><p>手动判断各个矩阵的关系</p>
+<p>详情见<a href="https://blog.csdn.net/liangzhaoyang1/article/details/51344992" target="_blank" rel="noopener">HDU 2056 Rectangles（计算相交面积）</a></p>
+<h3 id="解法3"><a href="#解法3" class="headerlink" title="解法3"></a>解法3</h3><p>暴力枚举各种情况</p>
+<p>详情见<a href="https://my.oschina.net/Tsybius2014/blog/500346" target="_blank" rel="noopener">LeetCode：Rectangle Area - 矩形交叉部分的面积</a>里面的解法2</p>
+<h1 id="第3题-最小公倍数"><a href="#第3题-最小公倍数" class="headerlink" title="第3题 最小公倍数"></a>第3题 最小公倍数</h1><h2 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h2><p>为什么1小时有60分钟，而不是100分钟呢？这是历史上的习惯导致。<br>但也并非纯粹的偶然：60是个优秀的数字，它的因子比较多。事实上，它是1至6的每个数字的倍数。即<code>1,2,3,4,5,6</code>都是可以除尽60。<br>我们希望寻找到能除尽1至n的的每个数字的最小整数。<br>不要小看这个数字，它可能十分大，比如n=100, 则该数为：<br><code>69720375229712477164533808935312303556800</code><br>请编写程序，实现对用户输入的 n （n&lt;100）求出1~n的最小公倍数。<br><strong>输入格式</strong><br>输入包含若干行整数：第1行为一个整数m，表示样例的组数；接下来有m行，每行为一个整数n，范围为[1,100],表示求1~n的最小公倍数。<br><strong>输出格式</strong><br>输出多行，每行为每个测试用例的最小的公倍数。<br><strong>样例输入</strong><br>2<br>6<br>10</p>
+<p><strong>样例输出</strong><br>60<br>2520</p>
+<p>两个数的最小公倍数就是不断找到该两个数的公约数并两个数同时除去该两个数，最后该两个数互质；<br>那么，1到n的最小公倍数，是1到n-1的最小公倍数乘以n的所有素因子中没有被1到n-1包含的素因子。<br>例如，1到7的最小公倍数是<code>2*3*2*5*7</code>，<code>8=2*2*2</code>,(8中2出现3次，1到7的素因子中只出现2次)那么1到8就是<code>2*3*2*5*7*2</code></p>
+<p>所以，需要将<code>[1, n]</code>的最小公倍数求出，比如6前面如果有2 3就可以用1替代。运用双重循环，如果这个数字可以被前面任意一个数整除，则被替换，后来只需要将这些数字乘起来即可，因为结果会很大，所以我们得用到大数乘法。<br>现在可以假设模拟一下<code>43*65</code>，假设num数组存储43（因为数字变大顺序是从右到左，故num[0]存储的3），并且乘以13后更新数组。</p>
+<p>基本流程是让num每一位去乘以n，然后对结果模10，即取出最后一位，因为有进位，所以将结果<code>/10</code>后就是对于的进位了。<br>c是代表进位的值<br><img src="/2018/12/07/18lanqiaobei/7.jpg" alt><br><img src="/2018/12/07/18lanqiaobei/8.jpg" alt><br>当处理完num时，因为还有进位没有处理完，故还得继续处理进位<br><img src="/2018/12/07/18lanqiaobei/6.jpg" alt><br><img src="/2018/12/07/18lanqiaobei/9.jpg" alt></p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> MAXN = <span class="hljs-number">120</span>;<br><span class="hljs-keyword">int</span> arr[MAXN];<br><br><span class="hljs-comment">//初始化，即求出对应的素因子</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">101</span>; i++)<br>        arr[i] = i;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-number">101</span>; i++)<br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt;= <span class="hljs-number">101</span>; j++)<br>        &#123;<br>            <span class="hljs-keyword">if</span>(arr[j] % arr[i] == <span class="hljs-number">0</span>)<span class="hljs-comment">//能被前面整除时，可以被替代</span><br>                arr[j] /= arr[i];<br>        &#125;<br>    &#125;<br>    <span class="hljs-comment">/*<br>    for(int i = 1; i &lt;= 101; i++)<br>        cout &lt;&lt; ans[i] &lt;&lt; " ";<br>    */</span><br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>    ios::sync_with_stdio(<span class="hljs-literal">false</span>);<br>    init();<br>    <span class="hljs-keyword">int</span> n;<br>    <span class="hljs-keyword">while</span>(<span class="hljs-built_in">cin</span> &gt;&gt; n)<br>    &#123;<br>        <span class="hljs-keyword">int</span> ans[MAXN] = &#123;<span class="hljs-number">0</span>&#125;;<br>        ans[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= n; i++)<span class="hljs-comment">//模拟大数乘法</span><br>        &#123;<br>            <span class="hljs-keyword">int</span> c = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; i; j++)<br>            &#123;<br>                <span class="hljs-keyword">int</span> tmp = ans[j] * arr[i] + c; <br>                ans[j] = tmp % <span class="hljs-number">10</span>;<br>                c = tmp / <span class="hljs-number">10</span>; <span class="hljs-comment">//进位</span><br>            &#125;<br>        &#125;<br><br>        <span class="hljs-keyword">int</span> pos = <span class="hljs-number">0</span>;<span class="hljs-comment">//因为前面有多余的前导0，故需要找到合适的位置再输出</span><br>        <span class="hljs-keyword">for</span>(pos = <span class="hljs-number">100</span>; pos &gt;= <span class="hljs-number">0</span>; pos--)<br>        &#123;<br>            <span class="hljs-keyword">if</span>(ans[pos])<br>                <span class="hljs-keyword">break</span>;<br>        &#125;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = pos; i &gt;= <span class="hljs-number">0</span>; i--) <span class="hljs-comment">//结果是倒序保存的</span><br>           <span class="hljs-built_in">cout</span> &lt;&lt; ans[i];<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="第4题-打水问题"><a href="#第4题-打水问题" class="headerlink" title="第4题 打水问题"></a>第4题 打水问题</h1><p>题目可提交于<a href="http://210.43.24.243/problem.php?id=1248&amp;csrf=JXS3xgD5JJvNvWhMARnHz9hrj3kT30Pq" target="_blank" rel="noopener">XYNUOJ1488</a></p>
+<hr>
+<h2 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h2><p>　　N个人要打水，有M个水龙头，第i个人打水所需时间为Ti，请安排一个合理的方案使得所有人的等待时间之和尽量小。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>　　第一行两个正整数N M 接下来一行N个正整数Ti。<br> 　　N,M&lt;=1000，Ti&lt;=1000</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>　　最小的等待时间之和。（不需要输出具体的安排方案）</p>
+<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><p>7 3<br>3 6 1 4 2 5 7</p>
+<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><p>11</p>
+<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a><em>提示</em></h2><p>一种最佳打水方案是，将N个人按照Ti从小到大的顺序依次分配到M个龙头打水。  　　<br>例如样例中，Ti从小到大排序为1，2，3，4，5，6，7，将他们依次分配到3个龙头，则去龙头一打水的为1，4，7；去龙头二打水的为2,5；去第三个龙头打水的为3,6。  　　<br>第一个龙头打水的人总等待时间 = 0 + 1 + (1 + 4) = 6  　　<br>第二个龙头打水的人总等待时间 = 0 + 2 = 2  　　<br>第三个龙头打水的人总等待时间 = 0 + 3 = 3  　　<br>所以总的等待时间 = 6 + 2 + 3 = 11</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p><strong>这题只需要把所有人的打水时间排序，然后每个人依次分到每个水龙头. 接着计算时间即可 用一个数组存每个人的打数时间+等待时间. 把所有人的时间加起来即是总时间</strong></p>
+<p><strong>下面是无聊写的一大段分析 有兴趣就看 有可能会有说错的地方 有问题请提</strong></p>
+<p>根据题目给出第提示可以发现一个规律. 把所有人的打水时间进行一次排序后. 把排序后的每个人按顺序分配给每个水龙头. <em>(这里顺序分配的意思就是 例如有5个人a,b,c,d,e 2个水龙头A,B 并假设5人排序后顺序还是a,b,c,d,e. 那么顺序分配的意思就是 第一个人到A 第二个人到B 接着第三个人又回到A 一个循环直到所有人分配好)</em></p>
+<p>测试发现这样得出的答案是最小等待时间.</p>
+<p>不考虑提示. 如果想要M个水龙头 N个人打水等待时间最小. 首先想一下最大时间是怎样算的. </p>
+<p>假设 4个人a,b,c,d 打水时间分别为10000,2,3,9999  <strong>有1个水龙头</strong></p>
+<p>想要算最大时间. 首先已经知道要把所有人放在一个水龙头上. 那么接下来还要怎么做呢. 很明显是把打水时间越长的放越前面. 这样后面的人就要等的越久了.</p>
+<p>a d c b 这样的打水顺序</p>
+<p>d c b都要等a 于是这里的时间为 T += 10000 * 3</p>
+<p>c b 又要等d       T += 9999 * 2</p>
+<p>b 等c          T+= 3</p>
+<p>T = 50001</p>
+<p>得出想要算最大时间 需要把打水时间越久的人放在越前. 算最小时间于是就是反过来. 因此需要用到的排序</p>
+<p>重新整理下 算最小时间 可知顺序为 b c d a</p>
+<p>c d a等b    T += 2 * 3</p>
+<p>d a 等c     T += 3 * 2</p>
+<p>a等d    T += 9999</p>
+<p>T = 10011</p>
+<p>接下来考虑多个水龙头的情况</p>
+<p>如果有多个水龙头的话. 根据前面只有一个水龙头的例子应该可以想出. 打水时间长的人 应该尽量分散到不同到水龙头. </p>
+<p>假设还是上面的假设 只是换成两个水龙头</p>
+<p>如果要求最小 毫无疑问你最想做的应该就是把9999和10000分开 以成下面这样(竖着看)</p>
+<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs undefined">水龙头A        水龙头B<br>b(2)         a(10000)<br><br>c(3)<br><br>d(9999)<br></code></pre></td></tr></table></figure>
+<p>这样的时间T会是</p>
+<p>水龙头A = 2*2 + 3 = 7</p>
+<p>水龙头B = 0</p>
+<p>T = 7</p>
+<p>但是好像还不是最优 因为水龙头A有3人 b后面有两人 因此b的时间要算上两倍 而水龙头B上只有1人.</p>
+<p>尝试让每个水龙头的人数均匀起来 把c分配到水龙头B</p>
+<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs undefined">水龙头A        水龙头B<br>b(2)          c(3)<br><br>d(9999)       a(10000)<br></code></pre></td></tr></table></figure>
+<p>此时的时间T为</p>
+<p>水龙头A = 2</p>
+<p>水龙头B = 3</p>
+<p>T = 5</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="hljs highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;algorithm&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-keyword">char</span> ch = getchar();<br>    <span class="hljs-keyword">int</span> f = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(ch &lt; <span class="hljs-string">'0'</span> || ch &gt; <span class="hljs-string">'9'</span>)&#123;<span class="hljs-keyword">if</span>(ch == <span class="hljs-string">'-'</span>)f = <span class="hljs-number">0</span>;ch = getchar();&#125;<br>    <span class="hljs-keyword">while</span>(ch &gt;= <span class="hljs-string">'0'</span> &amp;&amp; ch &lt;= <span class="hljs-string">'9'</span>)&#123;x = x * <span class="hljs-number">10</span> + ch - <span class="hljs-string">'0'</span>;ch = getchar();&#125;<br>    <span class="hljs-keyword">return</span> f?x:x*<span class="hljs-number">-1</span>;<br>&#125;<br><span class="hljs-keyword">int</span> a[<span class="hljs-number">1001</span>];<br><span class="hljs-keyword">int</span> b[<span class="hljs-number">1001</span>];<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>  <br></span>&#123;  <br>    <span class="hljs-keyword">int</span> n = read(),m = read();<br><br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; n;i ++)<br>    &#123;<br>        a[i] = read();<br>    &#125;<br>    <br>    sort(a,a + n);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; m;i ++)<br>    &#123;<br>        b[i] = a[i];<br>    &#125;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = m;i &lt; n;i ++)<br>    &#123;<br>        b[i] = a[i] + b[i - m];<br>    &#125;<br><br>    <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; n;i ++)<br>    &#123;<br>        sum += b[i];<br>    &#125;<br><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d"</span>,sum);<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;  <br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="第5题-密码发生器"><a href="#第5题-密码发生器" class="headerlink" title="第5题 密码发生器"></a>第5题 密码发生器</h1><p>题目可提交于<a href="http://nyoj.top/problem/519#" target="_blank" rel="noopener">NYOJ519</a></p>
+<hr>
+<h2 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h2><p>在对银行账户等重要权限设置密码的时候，我们常常遇到这样的烦恼：如果为了好记用生日吧，容易被破解，不安全；如果设置不好记的密码，又担心自己也会忘记；如果写在纸上，担心纸张被别人发现或弄丢了…</p>
+<p>这个程序的任务就是把一串拼音字母转换为6位数字（密码）。</p>
+<p>我们可以使用任何好记的拼音串(比如名字，王喜明，就写：wangximing)作为输入，程序输出6位数字。</p>
+<p>变换的过程如下：</p>
+<p>第一步. 把字符串6个一组折叠起来，比如wangximing则变为：</p>
+<p>wangxi</p>
+<p>ming</p>
+<p>第二步. 把所有垂直在同一个位置的字符的ascii码值相加，得出6个数字，如上面的例子，则得出：</p>
+<p>228 202 220 206 120 105</p>
+<p>第三步. 再把每个数字“缩位”处理：就是把每个位的数字相加，得出的数字如果不是一位数字，就再缩位，直到变成一位数字为止。例如: 228 =&gt; 2+2+8=12 =&gt; 1+2=3</p>
+<p>上面的数字缩位后变为：344836, 这就是程序最终的输出结果！</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><p>要求程序从键盘输入数据，输入格式为：第一行是一个整数n（0&lt;n&lt;100），表示下边有多少输入行，接下来是n行字符串，就是等待变换的字符串。</p>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h2><p>输出格式为：n行变换后的6位密码。</p>
+<h2 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入"></a>样例输入</h2><p>3</p>
+<p>zhangfeng</p>
+<p>wangximing</p>
+<p>jiujingfazi</p>
+<h2 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出"></a>样例输出</h2><p>772243</p>
+<p>344836</p>
+<p>297332</p>
+<h2 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h2><p>对于这条题目 题意应该很容易明白. 对于大家来说可能难在代码的实现. 其实实现也是很简单的. 下面一步步讲题目的操作实现</p>
+<ol>
+<li>“把字符串6个一组折叠起来” 其实这一步可以忽略的. 题目是处理多个字符串. 这里就当做只处理一个了. 首先读入字符串 题目告知字符串是由拼音字母组成 因此不用担心有空格问题. 直接用scanf读字符串即可.</li>
+<li>对于第二步. 相信大部分人卡在第一步上了，总想着怎样把字符串6个6个的折起来. 又或者弄了多个字符串数组. 其实并不用. 要算第二步，其实只需要算字符串的前6个下标. 啥意思呢. 看看下图<img src="/2018/12/07/18lanqiaobei/4.png" alt></li>
+<li>根据上面的方法算出6个数字. 第三步是对每个数字进行缩位处理. 这个嘛 就更加简单了. 可以不断对这个数对10取模和除以10. 得出每一位的数. 然后求出每一位的数字之和就是缩位结果. </li>
+<li>对于答案的输出. 不需要考虑拼接 只需要把每个数的缩位结果依次输出即可.</li>
+</ol>
+<h2 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h2><figure class="hljs highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span><br></span>&#123;<br>	<span class="hljs-keyword">char</span> ch = getchar();<br>	<span class="hljs-keyword">int</span> f = <span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">while</span>(ch &lt; <span class="hljs-string">'0'</span> || ch &gt; <span class="hljs-string">'9'</span>)&#123;<span class="hljs-keyword">if</span>(ch == <span class="hljs-string">'-'</span>)f = <span class="hljs-number">0</span>;ch = getchar();&#125;<br>	<span class="hljs-keyword">while</span>(ch &gt;= <span class="hljs-string">'0'</span> &amp;&amp; ch &lt;= <span class="hljs-string">'9'</span>)&#123;x = x * <span class="hljs-number">10</span> + ch - <span class="hljs-string">'0'</span>;ch = getchar();&#125;<br>	<span class="hljs-keyword">return</span> f?x:x*<span class="hljs-number">-1</span>;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>	<span class="hljs-keyword">int</span> n = read();<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> l = <span class="hljs-number">0</span>;l &lt; n;l ++)<br>	&#123;<br>		<span class="hljs-built_in">string</span> s;<br>		<span class="hljs-built_in">cin</span> &gt;&gt; s;<br>		<span class="hljs-keyword">int</span> num[<span class="hljs-number">6</span>] = &#123;&#125;;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">6</span>;i ++)<br>		&#123;<br>			<span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = i;j &lt; s.size();j += <span class="hljs-number">6</span>)<br>			&#123;<br>				count += s[j];<br>			&#125;<br>			num[i] = count;<br>		&#125;<br>		<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">6</span>;i ++)<br>		&#123;<br>			<span class="hljs-keyword">int</span> t = num[i];<br>			<span class="hljs-keyword">while</span>(t / <span class="hljs-number">10</span> != <span class="hljs-number">0</span>)<br>			&#123;<br>				<span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;<br>				<span class="hljs-keyword">int</span> temp = t;<br>				<span class="hljs-keyword">while</span>(temp &gt; <span class="hljs-number">0</span>)<br>				&#123;<br>					count += temp % <span class="hljs-number">10</span>;<br>					temp /= <span class="hljs-number">10</span>;<br>				&#125;<br>				t = count;<br>			&#125;<br>			num[i] = t;<br>			<span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d"</span>,num[i]);<br>		&#125;<br>		<span class="hljs-built_in">printf</span>(<span class="hljs-string">"\n"</span>);<br>	&#125;<br>	<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="第7题-学霸的迷宫"><a href="#第7题-学霸的迷宫" class="headerlink" title="第7题 学霸的迷宫"></a>第7题 学霸的迷宫</h1><h2 id="问题描述-4"><a href="#问题描述-4" class="headerlink" title="问题描述"></a>问题描述</h2><p>学霸抢走了大家的作业，班长为了帮同学们找回作业，决定去找学霸决斗。但学霸为了不要别人打扰，住在一个城堡里，城堡外面是一个二维的格子迷宫，要进城堡必须得先通过迷宫。因为班长还有妹子要陪，磨刀不误砍柴功，他为了节约时间，从线人那里搞到了迷宫的地图，准备提前计算最短的路线。可是他现在正向妹子解释这件事情，于是就委托你帮他找一条最短的路线。<br><strong>输入格式</strong><br>包含若干测试用例，每个测试用例：<br>第一行两个整数n， m，为迷宫的长宽。 　　<br>接下来n行，每行m个数，数之间没有间隔，为0或1中的一个。0表示这个格子可以通过，1表示不可以。假设你现在已经在迷宫坐标(1,1)的地方，即左上角，迷宫的出口在(n,m)。每次移动时只能向上下左右4个方向移动到另外一个可以通过的格子里，每次移动算一步。数据保证(1,1)，(n,m)可以通过。</p>
+<p><strong> 输出格式</strong><br>第一行一个数为需要的最少步数K。<br>第二行K个字符，每个字符<code>∈{U,D,L,R}</code>,分别表示上下左右。如果有多条长度相同的最短路径，选择在此表示方法下字典序最小的一个。<br><strong>样例输入</strong><br>3 3<br>001<br>100<br>110</p>
+<p>3 3<br>000<br>000<br>000</p>
+<p><strong>样例输出</strong><br>4<br>RDRD<br>4<br>DDRR</p>
+<p><strong>数据规模</strong></p>
+<p>有<code>20%</code>的数据满足：<code>1&lt;=n,m&lt;=10</code> </p>
+<p>有<code>50%</code>的数据满足：<code>1&lt;=n,m&lt;=50</code> </p>
+<p>有<code>100%</code>的数据满足：<code>1&lt;=n,m&lt;=500</code></p>
+<p>参考：<br><a href="http://www.cnblogs.com/chiweiming/p/9406530.html" target="_blank" rel="noopener">http://www.cnblogs.com/chiweiming/p/9406530.html</a><br>此题用BFS和DFS都能得出结果，但是用DFS会超时，用BFS一旦找到迷宫出口，即可确定最短径，<br>而DFS搜索出每一条可达路径，然后需要比较步数才能确定最短路径。<br>此题需要解决的两个问题：</p>
+<ol>
+<li>字典序列输出<br>  按照DLRU的访问顺序就能在到达终点时确定字典序最小的最短路径了。</li>
+<li>还原路径<br>  路径的存储可以另外开辟一个迷宫大小的二维数组，到达每一个点，存储这个点的上一个点到这个点的方向(UDRL其中一个)，这样当到达终点时，可以递归输出最短路径，可以看下图举例。</li>
+</ol>
+<p><img src="/2018/12/07/18lanqiaobei/10.jpg" alt></p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/*<br>Submit Time: 12-07 16:13<br>Exe.Time: 78ms<br>Exe.Memory: 15.96MB<br>*/</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;queue&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> MAXN = <span class="hljs-number">1100</span>;<br><span class="hljs-keyword">int</span> Vis[MAXN][MAXN]; <span class="hljs-comment">//判断有没有走过了</span><br><span class="hljs-keyword">char</span> Map[MAXN][MAXN]; <span class="hljs-comment">//步数计数</span><br><span class="hljs-keyword">int</span> Step[MAXN][MAXN];<br><span class="hljs-keyword">int</span> Path[MAXN][MAXN];<br><span class="hljs-keyword">char</span> str[] = &#123;<span class="hljs-string">"DLRU"</span>&#125;;<br><br><span class="hljs-keyword">int</span> dir[<span class="hljs-number">4</span>][<span class="hljs-number">2</span>] = <span class="hljs-comment">//四个方向,按照字典序</span><br>&#123;<br>    &#123;<span class="hljs-number">1</span>,<span class="hljs-number">0</span>&#125;,<br>    &#123;<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>&#125;,<br>    &#123;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>&#125;,<br>    &#123;<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>&#125;<br>&#125;;<br><br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">point</span>&#123;</span><br>    <span class="hljs-keyword">int</span> x, y; <span class="hljs-comment">//坐标</span><br>&#125;in, out, beg; <span class="hljs-comment">//入队的值，出队的值，开始的值</span><br><br><span class="hljs-keyword">int</span> n, m;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">check</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> <span class="hljs-comment">//检查边界</span><br></span>&#123;<br>    <span class="hljs-keyword">if</span>(!Vis[x][y] &amp;&amp; x &gt;= <span class="hljs-number">1</span> &amp;&amp; y &gt;= <span class="hljs-number">1</span> <br>            &amp;&amp; x &lt;= n &amp;&amp; y &lt;= m &amp;&amp; Map[x][y] != <span class="hljs-string">'1'</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">bfs</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-built_in">memset</span>(Vis, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(Vis));<br>    <span class="hljs-built_in">memset</span>(Step, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(Vis));<br>    Vis[beg.x][beg.y] = <span class="hljs-number">1</span>;  <span class="hljs-comment">//第一个队列的元素，然后标记为已经访问过了</span><br>    Step[beg.x][beg.y] = <span class="hljs-number">0</span>; <span class="hljs-comment">//还没有开始走，步数为0</span><br>    <span class="hljs-built_in">queue</span>&lt;point&gt;q; <br>    q.push(beg); <span class="hljs-comment">//将第一个元素入队</span><br>    <span class="hljs-keyword">while</span>(!q.empty())<br>    &#123;<br>        out = q.front(); <span class="hljs-comment">//将第一个元素出队</span><br>        q.pop();<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) <span class="hljs-comment">//四个方向开始走</span><br>        &#123;<br>            in.x = out.x + dir[i][<span class="hljs-number">0</span>];<br>            in.y = out.y + dir[i][<span class="hljs-number">1</span>];<br>            <span class="hljs-keyword">if</span>(check(in.x, in.y))<br>            &#123;<br>                Path[in.x][in.y] = i;<br>                <span class="hljs-comment">//终点，直接返回步数，因为走到终点，step数组还没有+1，所以要+1</span><br>                <span class="hljs-keyword">if</span>(in.x == n &amp;&amp; in.y == m)<br>                    <span class="hljs-keyword">return</span> Step[out.x][out.y] + <span class="hljs-number">1</span>;<br>                q.push(in);<br>                Vis[in.x][in.y] = <span class="hljs-number">1</span>;<br>                Step[in.x][in.y] = Step[out.x][out.y] + <span class="hljs-number">1</span>; <span class="hljs-comment">//步数累加</span><br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printPath</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> <span class="hljs-comment">//路径还原</span><br></span>&#123;<br>    <span class="hljs-keyword">if</span>(x == <span class="hljs-number">1</span> &amp;&amp; y == <span class="hljs-number">1</span>)<br>        <span class="hljs-keyword">return</span>;<br>    printPath(x - dir[Path[x][y]][<span class="hljs-number">0</span>], y - dir[Path[x][y]][<span class="hljs-number">1</span>]);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%c"</span>, str[Path[x][y]]);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-keyword">while</span>(~<span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;n, &amp;m))<br>    &#123;<br>        getchar(); <span class="hljs-comment">//吸收回车符，下面同理</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>        &#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt;= m; j++)<br>                <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%c"</span>, &amp;Map[i][j]);<br>            getchar();<br>        &#125;<br>        beg.x = <span class="hljs-number">1</span>; <span class="hljs-comment">//从(1,1)开始</span><br>        beg.y = <span class="hljs-number">1</span>;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, bfs());<br>        printPath(n, m);<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"\n"</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/蓝桥杯/" rel="tag"><i class="fas fa-tags"></i>蓝桥杯</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2018/11/29/math/" rel="next" title="数学专项"><i class="fas fa-angle-left"></i><span class="nav-title">数学专项</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2018/12/14/18-19new/" rel="prev" title="18-19学年码到成功ACM集训队招新"><span class="nav-title">18-19学年码到成功ACM集训队招新</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control">
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <h1 class="author-name">码到成功</h1>
+  <h2 class="author-description">除非你能在床上赚钱，否则就不要赖在床上</h2>
+  <div class="site-count">
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#第2题-矩形面积交"><span class="toc-text">第2题 矩形面积交</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#问题描述"><span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#解法1"><span class="toc-text">解法1</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#解法2"><span class="toc-text">解法2</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#解法3"><span class="toc-text">解法3</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#第3题-最小公倍数"><span class="toc-text">第3题 最小公倍数</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#问题描述-1"><span class="toc-text">问题描述</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#第4题-打水问题"><span class="toc-text">第4题 打水问题</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#问题描述-2"><span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#输入格式"><span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#输出格式"><span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#样例输入"><span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#样例输出"><span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#提示"><span class="toc-text">提示</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题解"><span class="toc-text">题解</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#Code"><span class="toc-text">Code</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#第5题-密码发生器"><span class="toc-text">第5题 密码发生器</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#问题描述-3"><span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#输入描述"><span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#输出描述"><span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#样例输入-1"><span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#样例输出-1"><span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题解-1"><span class="toc-text">题解</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#Code-1"><span class="toc-text">Code</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#第7题-学霸的迷宫"><span class="toc-text">第7题 学霸的迷宫</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#问题描述-4"><span class="toc-text">问题描述</span></a></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">码到成功</span><span class="year"><i class="far fa-copyright"></i>2020</span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="alternate" href="/atom.xml" title="GCU-ACM" type="application/atom+xml">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/[object Object].css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "Copied";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "Copy";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>2019测试赛I | GCU-ACM - Talk is cheap,show me your code</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">GCU-ACM</a></h1>
+        <h2 class="subtitle">Talk is cheap,show me your code</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/190408/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="码到成功">
+       <meta itemprop="description" content="除非你能在床上赚钱，否则就不要赖在床上">
+       <meta itemprop="image" content="/">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="GCU-ACM">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">2019测试赛I</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-04-08T19:00:00+08:00">2019-04-08 19:00:00</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/测试赛/" itemprop="url" rel="index"><span itemprop="name">测试赛</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>测试赛I题目及题解</p>
+<hr>
+<p>作者：老陈</p>
+<a id="more"></a>
+<h1 id="A-amp-B-买游戏"><a href="#A-amp-B-买游戏" class="headerlink" title="A&amp;B.买游戏"></a><a href="http://fzcoj.hustoj.com/problem.php?id=4495" target="_blank" rel="noopener">A&amp;B.买游戏</a></h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>大家都知道Steam这款理财软件吧？它是当前最大的游戏发布平台之一。玩家可以在该平台购买、下载、讨论、上传和分享游戏和软件。</p>
+<p>老陈最近安利了$N$个朋友来使用Steam，他们有一部分人在Steam上购买了或者退购了某款游戏。</p>
+<p>现在老陈知道他们在这段时间内购买/退购的情况 ，他想请你告诉他他的某些朋友拥有了几个游戏。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><p>输入三个正整数$N$,$M$,$Q$，分别代表被老陈安利来使用Steam的人数，这些人在Steam上的购买/退购记录条数，老陈想知道的朋友的游戏个数的人数。($1\leq N\leq 10^5$,$1\leq M \leq 10^6$,$1\leq Q \leq 10^5$)</p>
+<p>接下来输入$M$行，每行代表一个购买记录。格式为：</p>
+<blockquote>
+<p>记录类型 购买/退购人 游戏名</p>
+</blockquote>
+<p>记录类型仅包含一个字母：“G”为购买游戏，“T”为退购游戏。购买/退购人和游戏名均为一个长度不大于20且不包含空格的字符串。保证退购的游戏在之前肯定购买且游戏不会重复购买，记录按时间顺序给出。</p>
+<p>接下来$Q$行，每行代表一个询问。</p>
+<p>每行包含一个长度不超过20的字符串，代表老陈询问当前游戏个数的朋友名字。</p>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h2><p>对于每个询问，输出一个整数，代表这位朋友在Steam上拥有的游戏个数。</p>
+<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><blockquote>
+<p>3 6 3</p>
+<p>G LiMing SHENZHEN_I/O</p>
+<p>G ZhangSan SUDOKU</p>
+<p>G LiSi CROSS_FIRE</p>
+<p>G LiMing CROSS_FIRE</p>
+<p>T LiSi CROSS_FIRE</p>
+<p>G LiMing SUDOKU</p>
+<p>LiSi</p>
+<p>ZhangSan</p>
+<p>LiMing</p>
+</blockquote>
+<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><blockquote>
+<p>0</p>
+<p>1</p>
+<p>3</p>
+</blockquote>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>对于A题：<br>可以使用map来实现存储，对于每个操作，用户游戏数仅会+1或-1。（保证退购的游戏在之前肯定购买且游戏不会重复购买）。</p>
+<p>对于B题：<br>hash一下字符串就行了。<del>（其实A的想法放到B题可以卡过去）</del></p>
+<h2 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h2><figure class="hljs highlight C++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;set&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;map&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstring&gt;</span></span><br> <br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br> <br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-built_in">map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-keyword">int</span>&gt;inf;<br>    <span class="hljs-keyword">int</span> n, m, q;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%*c%d%*c%d%*c"</span>, &amp;n, &amp;m, &amp;q);<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; m; i++)<br>    &#123;<br>        <span class="hljs-keyword">char</span> type[<span class="hljs-number">50</span>], name[<span class="hljs-number">50</span>], game[<span class="hljs-number">50</span>];<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s%*c%s%*c%s%*c"</span>, type, name, game);<br>        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(type,<span class="hljs-string">"G"</span>)==<span class="hljs-number">0</span>)<br>            inf[(<span class="hljs-built_in">string</span>)name]++;<br>        <span class="hljs-keyword">else</span><br>            inf[(<span class="hljs-built_in">string</span>)name]--;<br>    &#125;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; q; i++)<br>    &#123;<br>        <span class="hljs-keyword">char</span> name[<span class="hljs-number">50</span>];<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s%*c"</span>, name);<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, inf[(<span class="hljs-built_in">string</span>)name]);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="C-“a”-N"><a href="#C-“a”-N" class="headerlink" title="C.“a”+N"></a><a href="http://fzcoj.hustoj.com/problem.php?id=4491" target="_blank" rel="noopener">C.“a”+N</a></h1><h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>在C语言中，“a”加上一个数的结果是一个整数。</p>
+<p>例如：“a”+6=97+6=103</p>
+<p>但是老陈觉得这样很无聊，所以他改变了这个加的定义：加N的结果是当前字符串按字典序的顺序之后第N个字符串。</p>
+<p>例如：”az”+4的结果就是”az”之后第四个字符串。(“az”，”ba”，”bb”，”bc”，”bd”)，所以”az”+4=”bd”。</p>
+<p>现在请你编写程序实现它。</p>
+<h2 id="输入描述-1"><a href="#输入描述-1" class="headerlink" title="输入描述"></a>输入描述</h2><p>第一行包含一个正整数$T$，代表数据组数。($1\leq T \leq 1000$)</p>
+<p>接下来$T$行，每行一个测试数据。每个测试数据包含一个字符串$s$和一个正整数$X$。(字符串长度不大于$10^4$且保证非空，$1\leq X \leq 10^{13}$)</p>
+<h2 id="输出描述-1"><a href="#输出描述-1" class="headerlink" title="输出描述"></a>输出描述</h2><p>对于每组测试数据，输出$s+X$的结果。</p>
+<h2 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入"></a>样例输入</h2><blockquote>
+<p>3</p>
+<p>a 10</p>
+<p>abcd 5</p>
+<p>zzz 3</p>
+</blockquote>
+<h2 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出"></a>样例输出</h2><blockquote>
+<p>k</p>
+<p>abci</p>
+<p>aaac</p>
+</blockquote>
+<h2 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h2><p>将字符串看成26进制数，将数字$X$转化为26进制数后相加即可。相加之后注意进位，按字母输出即可。</p>
+<h2 id="参考代码-1"><a href="#参考代码-1" class="headerlink" title="参考代码"></a>参考代码</h2><figure class="hljs highlight C++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;</span></span><br><br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> ll;<br><br><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> MAXN = <span class="hljs-number">1E4</span>+<span class="hljs-number">10</span>;<br><span class="hljs-keyword">char</span> s[MAXN];<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-keyword">int</span> t;<br>    ll n;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;t);<br>    <span class="hljs-keyword">while</span>(t--)<br>    &#123;<br>        ll arr[MAXN] = &#123;<span class="hljs-number">0</span>&#125;;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s %lld"</span>, s, &amp;n);<br>        <span class="hljs-keyword">int</span> len = <span class="hljs-built_in">strlen</span>(s);<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; len; i++)<br>            arr[i] = s[len<span class="hljs-number">-1</span>-i] - <span class="hljs-string">'a'</span>;<br>        ll next = <span class="hljs-number">0</span>;<br>        arr[<span class="hljs-number">0</span>] += n;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; len; i++)<br>        &#123;<br>            next = arr[i] / <span class="hljs-number">26</span>;<br>            arr[i] %= <span class="hljs-number">26</span>;<br>            <span class="hljs-keyword">if</span>(next)<br>            &#123;<br>                <span class="hljs-keyword">if</span>(i == len<span class="hljs-number">-1</span>)<br>                &#123;<br>                    arr[i+<span class="hljs-number">1</span>] = next<span class="hljs-number">-1</span>;<br>                    len++;<br>                &#125;<br>                <span class="hljs-keyword">else</span><br>                    arr[i+<span class="hljs-number">1</span>] += next;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = len<span class="hljs-number">-1</span>; i &gt;= <span class="hljs-number">0</span>; i--)<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%c"</span>, <span class="hljs-string">'a'</span> + arr[i]);<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"\n"</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="D-OC数"><a href="#D-OC数" class="headerlink" title="D.OC数"></a><a href="http://fzcoj.hustoj.com/problem.php?id=4492" target="_blank" rel="noopener">D.OC数</a></h1><h2 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h2><p>老陈非常喜欢素数，他现在想从某个区间的数中挑出任意个数相乘得到一个新数。如果这个新数是素数，老陈的兴奋值会+1。</p>
+<p>一开始老陈的兴奋值为0，之后他会选择N个区间，对于每个区间他会进行K次操作，当然这K次操作不会存在重复，这样老陈才会真的开心。</p>
+<p>请问最后老陈的兴奋值的最大值是多少？</p>
+<h2 id="输入描述-2"><a href="#输入描述-2" class="headerlink" title="输入描述"></a>输入描述</h2><p>第一行输入两个数$N$和$K$。($1 \leq N \leq 10^6$,$1\leq K \leq 10^9$)</p>
+<p>接下来$N$行，每行输入两个整数l和r代表老陈进行操作的区间 $[l,r]$。($1\leq l \leq r \leq 10^6$)</p>
+<h2 id="输出描述-2"><a href="#输出描述-2" class="headerlink" title="输出描述"></a>输出描述</h2><p>输出一个整数代表老陈操作结束后兴奋值的最大值。</p>
+<h2 id="样例输入-2"><a href="#样例输入-2" class="headerlink" title="样例输入"></a>样例输入</h2><blockquote>
+<p>2 5</p>
+<p>2 10</p>
+<p>1000 5000</p>
+</blockquote>
+<h2 id="样例输出-2"><a href="#样例输出-2" class="headerlink" title="样例输出"></a>样例输出</h2><blockquote>
+<p>0</p>
+</blockquote>
+<h2 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h2><p>回想一下素数的定义：因子只有1和它自己的数。那么对于一个素数$p$，肯定只有一种乘法表示：$p=1*p$ 。而对于其他的数，相乘的结果肯定不是素数。</p>
+<p>那么，对于没有包含1的区间，对答案的贡献肯定是0。而对于包含1的区间，对答案的贡献为区间内的素数个数。</p>
+<p>素数筛+前缀和即可解决问题。</p>
+<h2 id="参考代码-2"><a href="#参考代码-2" class="headerlink" title="参考代码"></a>参考代码</h2><figure class="hljs highlight C++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">int</span> prime_num[<span class="hljs-number">1000010</span>];<br><span class="hljs-keyword">bool</span> isprime[<span class="hljs-number">1000010</span>];<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-number">1000000</span>; i++)<br>    &#123;<br>        prime_num[i] = prime_num[i - <span class="hljs-number">1</span>];<br>        <span class="hljs-keyword">if</span> (!isprime[i])<br>        &#123;<br>            prime_num[i]++;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>; i*j &lt;= <span class="hljs-number">1000000</span>; j++)<br>                isprime[i*j] = <span class="hljs-literal">true</span>;<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-keyword">int</span> n, k;<br>    <span class="hljs-built_in">cin</span> &gt;&gt; n &gt;&gt; k;<br>    init();<br>    ll ans = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)<br>    &#123;<br>        <span class="hljs-keyword">int</span> l, r;<br>        <span class="hljs-built_in">cin</span> &gt;&gt; l &gt;&gt; r;<br>        <span class="hljs-keyword">if</span> (l &gt; <span class="hljs-number">1</span>)<br>            <span class="hljs-keyword">continue</span>;<br>        ans += (min(prime_num[r], k));<br>    &#125;<br>    <span class="hljs-built_in">cout</span> &lt;&lt; ans;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="E-有升有降"><a href="#E-有升有降" class="headerlink" title="E.有升有降"></a><a href="http://fzcoj.hustoj.com/problem.php?id=4493" target="_blank" rel="noopener">E.有升有降</a></h1><h2 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h2><p>老陈某天的心情值跟过山车一样跌宕起伏，平常的时候，老陈的心情值是不下降的（即可能升高或不变但不会下降）。但是当老陈受到打击的时候<del>（做题自闭什么的）</del>，心情值就是不上升的（即可能下降或不变但不会上升）。</p>
+<p>他的朋友想去安慰<del>（调侃）</del>一下老陈：“你在$a$时间到$b$时间是不是受到了什么打击了啊说给我乐乐？”</p>
+<p>如果老陈在这段时间内的心情值前一部分是不下降的，剩下的部分是不上升的，那么他的朋友才会觉得这个提问有价值。所以请你判断一下这些提问时间是不是有价值的。</p>
+<h2 id="输入描述-3"><a href="#输入描述-3" class="headerlink" title="输入描述"></a>输入描述</h2><p>第一行包含两个整数$n$，$m$。分别代表这一天的时间和他的朋友询问的次数。($1 \leq n,m \leq 10^5$)</p>
+<p>第二行包含$n$个整数代表这一天的每一个时间老陈的心情值。(均不大于$10^9$且均为正整数)</p>
+<p>接下来$m$行，每行包含两个正整数$a$，$b$，代表他的朋友询问的时间段。($1 \leq a \leq b \leq n $)</p>
+<h2 id="输出描述-3"><a href="#输出描述-3" class="headerlink" title="输出描述"></a>输出描述</h2><p>对于每一个时间段，如果是值得提问的，输出”Yes”；否则输出”No”。</p>
+<h2 id="样例输入-3"><a href="#样例输入-3" class="headerlink" title="样例输入"></a>样例输入</h2><blockquote>
+<p>8 6</p>
+<p>1 2 1 3 3 5 2 1</p>
+<p>1 3</p>
+<p>2 3</p>
+<p>2 4</p>
+<p>8 8</p>
+<p>1 4</p>
+<p>5 8</p>
+</blockquote>
+<h2 id="样例输出-3"><a href="#样例输出-3" class="headerlink" title="样例输出"></a>样例输出</h2><blockquote>
+<p>Yes</p>
+<p>Yes</p>
+<p>No</p>
+<p>Yes</p>
+<p>No</p>
+<p>Yes</p>
+</blockquote>
+<h2 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h2><p>$dp[i]$表示以$a[i]$为终点的连续不下降序列的长度，$rdp[i]$表示以$a[i]$为起点的连续不下降序列的长度。</p>
+<p>如果$dp[l]+rdp[r]&gt;=r-l+1$，那么就是$Yes$，否则为$No$。</p>
+<h2 id="参考代码-3"><a href="#参考代码-3" class="headerlink" title="参考代码"></a>参考代码</h2><figure class="hljs highlight C++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> ll;<br><br><span class="hljs-keyword">int</span> a[<span class="hljs-number">100010</span>], dp[<span class="hljs-number">100010</span>], rdp[<span class="hljs-number">100010</span>];<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-keyword">int</span> n, Q, l, r;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;n, &amp;Q);<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;a[i]);<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (a[i] &lt;= a[i - <span class="hljs-number">1</span>])<br>            dp[i] = dp[i - <span class="hljs-number">1</span>] + <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">else</span><br>            dp[i] = <span class="hljs-number">1</span>;<br>    &#125;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = n; i &gt;= <span class="hljs-number">1</span>; i--)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (a[i] &lt;= a[i + <span class="hljs-number">1</span>])<br>            rdp[i] = rdp[i + <span class="hljs-number">1</span>] + <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">else</span><br>            rdp[i] = <span class="hljs-number">1</span>;<br>    &#125;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; Q; i++)<br>    &#123;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;l, &amp;r);<br>        <span class="hljs-keyword">if</span> (rdp[l] + dp[r] &gt;= r - l + <span class="hljs-number">1</span>)<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Yes\n"</span>);<br>        <span class="hljs-keyword">else</span><br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"No\n"</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="F-刷墙"><a href="#F-刷墙" class="headerlink" title="F.刷墙"></a><a href="http://fzcoj.hustoj.com/problem.php?id=4494" target="_blank" rel="noopener">F.刷墙</a></h1><h2 id="题目描述-4"><a href="#题目描述-4" class="headerlink" title="题目描述"></a>题目描述</h2><p>最近老陈的亲戚家重新装修，老陈被叫去帮忙刷墙。</p>
+<p>老陈拿着墙刷，刷着刷着感到无聊就转了一下。这转了一下不要紧，老陈的脑袋突然嗡的一声蹦出一个问题：</p>
+<p>我拿着这个墙刷转一个角度，它涂了多大的面积的墙？</p>
+<p>这问题一出来就不得了，老陈想了好久还没想出来。你能帮他解决吗？</p>
+<p>我们用标准一点的语言来描述这个问题：</p>
+<p>有一个矩形（即墙刷），左边的边长为$a$,上边的边长为$b$，后该矩形以左下角的点为旋转点进行旋转角度 $\theta$（如图所示）。求蓝色区域的面积。</p>
+<p><div style="width:50%;height:50%"><br><img src="/2019/04/08/190408/e.png"><br></div></p>
+<h2 id="输入描述-4"><a href="#输入描述-4" class="headerlink" title="输入描述"></a>输入描述</h2><p>输入包含三个整数$a$，$b$，$\theta$。($1\leq a,b\leq 10^6$，$0\leq \theta \leq 180$)</p>
+<h2 id="输出描述-4"><a href="#输出描述-4" class="headerlink" title="输出描述"></a>输出描述</h2><p>输出一个数代表所求面积，保留三位小数。</p>
+<h2 id="样例输入-4"><a href="#样例输入-4" class="headerlink" title="样例输入"></a>样例输入</h2><blockquote>
+<p>2 2 90</p>
+</blockquote>
+<h2 id="样例输出-4"><a href="#样例输出-4" class="headerlink" title="样例输出"></a>样例输出</h2><blockquote>
+<p>10.283</p>
+</blockquote>
+<h2 id="解题思路-4"><a href="#解题思路-4" class="headerlink" title="解题思路"></a>解题思路</h2><p><img src="/2019/04/08/190408/e2.png" alt></p>
+<p>答案即为扇形面积加上区域$I$和区域$II$的面积。（即矩形面积）</p>
+<h2 id="参考代码-4"><a href="#参考代码-4" class="headerlink" title="参考代码"></a>参考代码</h2><figure class="hljs highlight C++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs C++"><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;math&gt;</span></span><br><br><span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-built_in">acos</span>(<span class="hljs-number">-1.0</span>);<br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-keyword">int</span> c, k, q;<br>    <span class="hljs-built_in">cin</span> &gt;&gt; c &gt;&gt; k &gt;&gt; q;<br>    ll r = c * c + k * k;<br>    ll ju = c * k;<br>    <span class="hljs-keyword">double</span> ans = q / <span class="hljs-number">360.0</span> * PI * r + ju;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%.3lf"</span>, ans);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p><strong>E题若角度范围增大为360的话该怎么处理呢？</strong></p>
+<h1 id="补题？"><a href="#补题？" class="headerlink" title="补题？"></a>补题？</h1><p>传送门：<a href="http://fzcoj.hustoj.com/contest.php?cid=1061" target="_blank" rel="noopener">http://fzcoj.hustoj.com/contest.php?cid=1061</a></p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/测试赛/" rel="tag"><i class="fas fa-tags"></i>测试赛</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/04/04/190404/" rel="next" title="LCS&&LIS"><i class="fas fa-angle-left"></i><span class="nav-title">LCS&&LIS</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2020/04/21/红黑树 2020_4_21/" rel="prev" title="红黑树资料整理"><span class="nav-title">红黑树资料整理</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control">
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <h1 class="author-name">码到成功</h1>
+  <h2 class="author-description">除非你能在床上赚钱，否则就不要赖在床上</h2>
+  <div class="site-count">
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#A-amp-B-买游戏"><span class="toc-text">A&amp;B.买游戏</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题目描述"><span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#输入描述"><span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#输出描述"><span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#样例输入"><span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#样例输出"><span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#解题思路"><span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#参考代码"><span class="toc-text">参考代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#C-“a”-N"><span class="toc-text">C.“a”+N</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题目描述-1"><span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#输入描述-1"><span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#输出描述-1"><span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#样例输入-1"><span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#样例输出-1"><span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#解题思路-1"><span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#参考代码-1"><span class="toc-text">参考代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#D-OC数"><span class="toc-text">D.OC数</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题目描述-2"><span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#输入描述-2"><span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#输出描述-2"><span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#样例输入-2"><span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#样例输出-2"><span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#解题思路-2"><span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#参考代码-2"><span class="toc-text">参考代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#E-有升有降"><span class="toc-text">E.有升有降</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题目描述-3"><span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#输入描述-3"><span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#输出描述-3"><span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#样例输入-3"><span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#样例输出-3"><span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#解题思路-3"><span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#参考代码-3"><span class="toc-text">参考代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#F-刷墙"><span class="toc-text">F.刷墙</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题目描述-4"><span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#输入描述-4"><span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#输出描述-4"><span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#样例输入-4"><span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#样例输出-4"><span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#解题思路-4"><span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#参考代码-4"><span class="toc-text">参考代码</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#思考"><span class="toc-text">思考</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#补题？"><span class="toc-text">补题？</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">码到成功</span><span class="year"><i class="far fa-copyright"></i>2020</span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

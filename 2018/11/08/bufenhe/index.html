@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="alternate" href="/atom.xml" title="GCU-ACM" type="application/atom+xml">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/[object Object].css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "Copied";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "Copy";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>部分和 | GCU-ACM - Talk is cheap,show me your code</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">GCU-ACM</a></h1>
+        <h2 class="subtitle">Talk is cheap,show me your code</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/08/bufenhe/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="码到成功">
+       <meta itemprop="description" content="除非你能在床上赚钱，否则就不要赖在床上">
+       <meta itemprop="image" content="/">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="GCU-ACM">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">部分和</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-11-08T19:36:59+08:00">2018-11-08 19:36:59</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/教学/" itemprop="url" rel="index"><span itemprop="name">教学</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>常用的预处理方法</p>
+<hr>
+<p>作者：老陈</p>
+<a id="more"></a>
+<h1 id="引言——统计成绩"><a href="#引言——统计成绩" class="headerlink" title="引言——统计成绩"></a>引言——统计成绩</h1><p><img src="/2018/11/08/bufenhe/1.png" alt></p>
+<p><strong>Sample Input</strong><br>5<br>2 3 5 9 7<br>5<br>1 2<br>2 3<br>4 5<br>1 5<br>3 5</p>
+<p><strong>Sample Output</strong><br>2.500<br>4.000<br>8.000<br>5.200<br>7.000</p>
+<p><strong>分析</strong><br><img src="/2018/11/08/bufenhe/2.png" alt></p>
+<p><img src="/2018/11/08/bufenhe/3.png" alt></p>
+<p>我们考虑一下这种解法的时间复杂度：首先，我们需要构造<code>psum[]</code>数组，这需要O(N)的时间。然后对于每一个查询，我们可以得知需要O(1)的时间。所以总时间复杂度为O(N)，这符合题目时限要求。</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">int</span> grade[<span class="hljs-number">1000010</span>];<br>ll psum[<span class="hljs-number">1000010</span>];<br><br><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">result</span><span class="hljs-params">(<span class="hljs-keyword">int</span> l, <span class="hljs-keyword">int</span> r)</span><br></span>&#123;<br>    <span class="hljs-keyword">return</span> (<span class="hljs-keyword">double</span>)(psum[r] - psum[l - <span class="hljs-number">1</span>]) / (r - l + <span class="hljs-number">1</span>);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-keyword">int</span> n, m;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;n);<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>    &#123;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, grade + i);<br>        psum[i] = psum[i - <span class="hljs-number">1</span>] + grade[i]; <span class="hljs-comment">//</span><br>    &#125;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;m);<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++)<br>    &#123;<br>        <span class="hljs-keyword">int</span> l, r;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;l, &amp;r);<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%.3lf\n"</span>, result(l, r));<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>内存能否再优化???是否注意到这里的<code>grade[]</code>数组在后面的询问中根本就没起到作用?此处可以不使用<code>grade[]</code>数组。</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br> &#123;<br>     <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;grade);<br>     psum[i] = psum[i - <span class="hljs-number">1</span>] + grade; <span class="hljs-comment">//</span><br> &#125;<br></code></pre></td></tr></table></figure>
+<h1 id="再探索——统计成绩II"><a href="#再探索——统计成绩II" class="headerlink" title="再探索——统计成绩II"></a>再探索——统计成绩II</h1><p><img src="/2018/11/08/bufenhe/4.png" alt><br><strong>Sample Input</strong><br>5<br>2 3 5 9 7<br>5<br>1 2<br>2 3<br>4 5<br>1 5<br>3 5</p>
+<p><strong>Sample Output</strong><br>0.25000<br>1.00000<br>1.00000<br>6.56000<br>2.66667</p>
+<p><img src="/2018/11/08/bufenhe/5.png" alt></p>
+<p><img src="/2018/11/08/bufenhe/6.png" alt></p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">int</span> grade;<br>ll psum[<span class="hljs-number">1000010</span>], sqsum[<span class="hljs-number">1000010</span>];<br><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">result</span><span class="hljs-params">(<span class="hljs-keyword">int</span> l, <span class="hljs-keyword">int</span> r)</span><br></span>&#123;<br>    <span class="hljs-keyword">double</span> ave = (<span class="hljs-keyword">double</span>)(psum[r] - psum[l - <span class="hljs-number">1</span>]) / (r - l + <span class="hljs-number">1</span>);<br>    <span class="hljs-keyword">double</span> res = sqsum[r] - sqsum[l - <span class="hljs-number">1</span>] - <span class="hljs-number">2</span> * ave*(psum[r] - psum[l - <span class="hljs-number">1</span>]) + (r - l + <span class="hljs-number">1</span>)*ave*ave;<br>    <span class="hljs-keyword">return</span> res / (r - l + <span class="hljs-number">1</span>);<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-keyword">int</span> n, m;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;n);<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>    &#123;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;grade);<br>        psum[i] = psum[i - <span class="hljs-number">1</span>] + grade;<br>        sqsum[i] = sqsum[i - <span class="hljs-number">1</span>] + grade * grade;<br>    &#125;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;m);<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++)<br>    &#123;<br>        <span class="hljs-keyword">int</span> l, r;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;l, &amp;r);<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%.5lf\n"</span>, result(l, r));<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="在二维数组中的应用——统计成绩III"><a href="#在二维数组中的应用——统计成绩III" class="headerlink" title="在二维数组中的应用——统计成绩III"></a>在二维数组中的应用——统计成绩III</h1><p><img src="/2018/11/08/bufenhe/7.png" alt></p>
+<p><strong>Sample Input</strong><br>5<br>1 2 3 5 6<br>9 8 7 6 5<br>1 2 7 9 5<br>2 5 0 8 7<br>3 6 9 4 5<br>3<br>1 2 3 4<br>3 4 1 3<br>1 5 1 5</p>
+<p><strong>Sample Output</strong><br>10<br>37<br>125</p>
+<p><img src="/2018/11/08/bufenhe/8.png" alt></p>
+<p><img src="/2018/11/08/bufenhe/9.png" alt></p>
+<p><img src="/2018/11/08/bufenhe/10.png" alt></p>
+<h1 id="Devu-the-Dumb-Guy——Codeforces-439B"><a href="#Devu-the-Dumb-Guy——Codeforces-439B" class="headerlink" title="Devu, the Dumb Guy——Codeforces 439B"></a>Devu, the Dumb Guy——Codeforces 439B</h1><p><img src="/2018/11/08/bufenhe/codeforce439b.png" alt></p>
+<p><img src="/2018/11/08/bufenhe/codeforce439b2.png" alt></p>
+<p><img src="/2018/11/08/bufenhe/codeforce439b3.png" alt></p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs c++"><br><span class="hljs-keyword">int</span> num[<span class="hljs-number">100010</span>];<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-keyword">int</span> n, m;<br>    <span class="hljs-built_in">cin</span> &gt;&gt; n &gt;&gt; m;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)<br>    &#123;<br>        <span class="hljs-built_in">cin</span> &gt;&gt; num[i];<br>    &#125;<br>    sort(num, num + n);<br>    ll res = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)<br>    &#123;<br>        res += (ll)num[i] * m;<br>        m = (m == <span class="hljs-number">1</span> ? <span class="hljs-number">1</span> : m - <span class="hljs-number">1</span>);<br>    &#125;<br>    <span class="hljs-built_in">cout</span> &lt;&lt; res;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="Alphabetic-Removals——Codeforces-999C"><a href="#Alphabetic-Removals——Codeforces-999C" class="headerlink" title="Alphabetic Removals——Codeforces 999C"></a>Alphabetic Removals——Codeforces 999C</h1><p>时间限制：2s        内存限制：256MB</p>
+<p><strong>题目描述</strong></p>
+<p>给定一个由n个小写字母组成的字符串s。Polycarp想从s中删除k个字母。 ( k≤n)Polycarp使用下面的算法k次：</p>
+<ul>
+<li><p>如果存在至少一个’a’，则删除最左的一个结束算法</p>
+</li>
+<li><p>如果存在至少一个’b’，则删除最左的一个结束算法</p>
+</li>
+<li><p>…</p>
+</li>
+<li><p>如果存在至少一个’z’，则删除最左的一个结束算法</p>
+</li>
+</ul>
+<p>这个算法删除了字符串s中的一个字母，Polycarp执行这个算法正好k次，也就删除了k个字母。帮助Polycarp得到结果字符串。</p>
+<p><strong>Sample Input</strong><br>15 3<br>cccaabababaccbc<br>1</p>
+<p><strong>Sample Output</strong><br>cccbbabaccbc</p>
+<hr>
+<p><strong>Sample Input</strong><br>4 15 9<br>cccaabababaccbc<br>2<br>5 1 2 1</p>
+<p><strong>Sample Output</strong><br>cccccc</p>
+<hr>
+<p><strong>Sample Input</strong><br>1 1<br>u</p>
+<p><strong>Sample Output</strong></p>
+<hr>
+<p><img src="/2018/11/08/bufenhe/codeforce439b5.png" alt></p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">int</span> t[<span class="hljs-number">26</span>];<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>    <span class="hljs-keyword">int</span> n, m, z = <span class="hljs-number">0</span>;<br>    <span class="hljs-built_in">cin</span> &gt;&gt; n &gt;&gt; m;<br>    <span class="hljs-built_in">string</span> s;<br>    <span class="hljs-built_in">cin</span> &gt;&gt; s;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)<br>    &#123;<br>        t[s[i] - <span class="hljs-string">'a'</span>]++;<br>    &#125;<br>    <span class="hljs-keyword">int</span> sum = m, x = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">26</span>; i++)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (sum - t[i] &gt;= <span class="hljs-number">0</span>)<br>        &#123;<br>            x++;<br>            sum -= t[i];<br>        &#125;<br>        <span class="hljs-keyword">else</span><br>            <span class="hljs-keyword">break</span>;<br>    &#125;<br>    <br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (s[i] - <span class="hljs-string">'a'</span> &lt; x)<br>            <span class="hljs-keyword">continue</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (s[i] - <span class="hljs-string">'a'</span> == x)<br>        &#123;<br>            <span class="hljs-keyword">if</span> (z &lt; sum)<br>            &#123;<br>                z++;<br>            &#125;<br>            <span class="hljs-keyword">else</span><br>                <span class="hljs-built_in">cout</span> &lt;&lt; s[i];<br>        &#125;<br>        <span class="hljs-keyword">else</span><br>            <span class="hljs-built_in">cout</span> &lt;&lt; s[i];<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/预处理/" rel="tag"><i class="fas fa-tags"></i>预处理</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2018/06/24/yuesai-18-06/" rel="next" title="2018六月月赛"><i class="fas fa-angle-left"></i><span class="nav-title">2018六月月赛</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2018/11/29/math/" rel="prev" title="数学专项"><span class="nav-title">数学专项</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control">
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <h1 class="author-name">码到成功</h1>
+  <h2 class="author-description">除非你能在床上赚钱，否则就不要赖在床上</h2>
+  <div class="site-count">
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#引言——统计成绩"><span class="toc-text">引言——统计成绩</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#再探索——统计成绩II"><span class="toc-text">再探索——统计成绩II</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#在二维数组中的应用——统计成绩III"><span class="toc-text">在二维数组中的应用——统计成绩III</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Devu-the-Dumb-Guy——Codeforces-439B"><span class="toc-text">Devu, the Dumb Guy——Codeforces 439B</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Alphabetic-Removals——Codeforces-999C"><span class="toc-text">Alphabetic Removals——Codeforces 999C</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">码到成功</span><span class="year"><i class="far fa-copyright"></i>2020</span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

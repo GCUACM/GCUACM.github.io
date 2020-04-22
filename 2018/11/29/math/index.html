@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="alternate" href="/atom.xml" title="GCU-ACM" type="application/atom+xml">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/[object Object].css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "Copied";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "Copy";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>数学专项 | GCU-ACM - Talk is cheap,show me your code</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">GCU-ACM</a></h1>
+        <h2 class="subtitle">Talk is cheap,show me your code</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/29/math/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="码到成功">
+       <meta itemprop="description" content="除非你能在床上赚钱，否则就不要赖在床上">
+       <meta itemprop="image" content="/">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="GCU-ACM">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">数学专项</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-11-29T19:36:59+08:00">2018-11-29 19:36:59</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/教学/" itemprop="url" rel="index"><span itemprop="name">教学</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>数学杂项——有时候可以关乎一个奖牌的东西</p>
+<hr>
+<p>作者：老陈</p>
+<a id="more"></a>
+<h1 id="例1——饥饿序列-Codeforces-327B"><a href="#例1——饥饿序列-Codeforces-327B" class="headerlink" title="例1——饥饿序列 (Codeforces 327B)"></a>例1——饥饿序列 (<a href="https://codeforces.com/problemset/problem/327/B" target="_blank" rel="noopener">Codeforces 327B</a>)</h1><p>时间限制：1s  内存限制：256MB</p>
+<p><strong>题目描述</strong></p>
+<p>lahub和lahubina去一家豪华餐厅约会。一切都很好直到结账。服务员要的不是钱，而是让lahub写一个带有n个数的饥饿序列。</p>
+<p>一个包含n个正整数的序列$a_1,a_2,…,a_n$是个饥饿序列当且仅当：</p>
+<ul>
+<li><p>序列单调递增</p>
+</li>
+<li><p>对于序列中任意两个数，均不能整除。</p>
+</li>
+</ul>
+<p>lahub遇到了麻烦，所以他向你求助。帮帮他！</p>
+<p><strong>输入描述</strong></p>
+<p>仅包含一个正整数n。（$1≤n≤10^5$）</p>
+<p><strong>输出描述</strong></p>
+<p>输出一行包含n个数代表一个可能的饥饿序列$a1,a2,…,an（1≤ ai  ≤ 10^7  ）$</p>
+<p>如果有多个符合要求的序列，请输出任意一个</p>
+<table>
+<thead>
+<tr>
+<th><strong>Sample Input</strong></th>
+<th><strong>Sample Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>2 9 15</td>
+</tr>
+<tr>
+<td>5</td>
+<td>11 14 20 27 31</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分析</strong></p>
+<p>对于题目描述，我们可以发现一个很关键的地方：</p>
+<font color="red">对于序列中任意两个数，均不能整除</font>
+
+<p>即一个数不可能成为另外一个数的因子。</p>
+<p>但注意并不是一定互质。例如：<code>9 12</code></p>
+<p>但是，很明显，质数序列肯定符合这个要求。</p>
+<p>所以仅需输出质数序列的前n项即可。</p>
+<p>获得质数序列可以使用素数筛，不再赘述。</p>
+<h1 id="例2——士兵与数字游戏-Codeforces-546D"><a href="#例2——士兵与数字游戏-Codeforces-546D" class="headerlink" title="例2——士兵与数字游戏(Codeforces 546D)"></a>例2——士兵与数字游戏(<a href="https://codeforces.com/problemset/problem/546/D" target="_blank" rel="noopener">Codeforces 546D</a>)</h1><p>时间限制：3s  内存限制：256MB</p>
+<p><strong>题目描述</strong></p>
+<p>两个士兵在玩游戏。一开始，他们中的一个选择了一个正整数 n 并把它给第二个士兵。然后第二个士兵会在每一回合尝试找到最大的数。每一轮包括选择一个正整数 x &gt; 1，使 n 能被 x 整除，并将 n 替换为 n / x 。当 n 等于 1，并且没有更多可能有效的移动时，游戏结束，第二名士兵的得分等于他执行的回合数。</p>
+<p>为了使游戏更有趣，第一名士兵选择的 n 是 a!/b!（这里的a和b是正整数且 $a ≥ b$）。</p>
+<p>第二名士兵的最高分是多少?</p>
+<p><strong>输入描述</strong></p>
+<p>第一行包含一个正整数t ，代表第二个士兵玩的游戏场数。（$1≤ t ≤10^6$）</p>
+<p>接下来 t 行，每行输入两个正整数a 和 b（$1 ≤ b ≤ a ≤5×10^6$），代表游戏中的整数n。</p>
+<p><strong>输出描述</strong></p>
+<p>对于每场游戏输出第二个士兵的最大得分。</p>
+<p><strong>Sample Input</strong><br>2<br>3 1<br>6 3</p>
+<p><strong>Sample Output</strong><br>2<br>5</p>
+<p><strong>分析</strong></p>
+<p>我们容易知道，这是一道求质因子个数的题目。</p>
+<p>对于一个数 n ，我们的 x 一直取 n 的质因子就可以得到最高分。</p>
+<p>但是，<br>$$<br>𝑛=\frac{a!}{𝑏!}=(𝑏+1)(𝑏+2)…(𝑎−1)𝑎<br>$$</p>
+<p>那么，对于一个问题，答案就是从 b+1 到 a 的所有数的质因子个数之和。</p>
+<p>那么，对于一个问题，答案就是从 b+1 到 a 的所有数的质因子个数之和。</p>
+<p>那么，怎么求一个数的质因子个数呢？</p>
+<p>首先，质数因子嘛，要求一下质数表。</p>
+<p>然后对于这个数，从2开始一个一个试除，能整除就质因子个数+1。</p>
+<p>考虑一下最差情况，<br>$$<br>t= 10^6, b=1, a= 5×10^6<br>$$</p>
+<p>我们需要对 $ 5×10^6 $个数求质因子个数 ，假设求因子个数的时间复杂度是O(1)（并不是）</p>
+<p>个数求质因子个数 ，假设求因子个数的时间复杂度是O(1)（并不是）</p>
+<p>，我们需要进行 $5×10^{12}$次运算。明显超时。</p>
+<p>有没有更好的做法？</p>
+<p>我们可以模仿素数筛的做法来得到  [1, $5×10^6$]的所有数的因子数。</p>
+<p>对于每个询问区间，我们可以用前缀和处理一下。</p>
+<p>对于一次询问，我们只需O(1)即可解决。</p>
+<p>对于最差情况，我们仅需大约$1.1×10^8$次运算即可，符合时间要求。</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-number">5000000</span>; i++) <br>&#123;<br>    <span class="hljs-keyword">if</span> (isprime[i] == <span class="hljs-number">0</span>) <br>    &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i; j &lt;= <span class="hljs-number">5000000</span>; j += i)<br>        &#123; <br>            <span class="hljs-keyword">int</span> q=j; <br>            <span class="hljs-keyword">while</span>(q%i==<span class="hljs-number">0</span>)<br>            &#123; <br>                isprime[j]++;<br>                q=q/i;<br>            &#125; <br>        &#125; <br>    &#125; <br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="例3——密码486"><a href="#例3——密码486" class="headerlink" title="例3——密码486"></a>例3——密码486</h1><p>时间限制：5s  内存限制：128MB</p>
+<p><strong>题目描述</strong></p>
+<p>Bob每戒一次烟，就会更换电子邮件的密码。密码总以<code>no-smokX</code>的形式设置。X则是个位数以上的自然数。不仅如此，第k次戒烟时，Bob会选择具有k个约数的数值X。例如，第12次戒烟时修改的密码是<code>no-smok486</code>。486有<code>1、2、3、6、9、…、243、486</code>共12个约数。</p>
+<p>有一天，Bob睡觉前下定决心要戒烟，并修改了邮箱密码。第二天清晨，他发现自己忘记了新设定的密码，只记得密码中的数值具有n个约数，且取值范围是<code>[l,r]</code>（包含l和r）。</p>
+<p>试编写程序，计算取值范围内共有几个可能的密码。</p>
+<p><strong>输入描述</strong></p>
+<p>第一行包含一个正整数t ，代表测试用例个数。（$1≤ t ≤ {50}$）</p>
+<p>接下来 t 行，每行输入三个正整数n、l 和 r（$n &lt; 400，1 ≤ l ≤ r ≤1×10^7，r-l &lt; 1×10^6  $）。</p>
+<p><strong>输出描述</strong></p>
+<p>对于每个测试用例，输出答案。</p>
+<p><strong>Sample Input</strong><br>3<br>2 2 10<br>12 486 486<br>200 1000000 2000000</p>
+<p><strong>Sample Output</strong><br>4<br>1<br>19</p>
+<p>本题要求的是<code>[l,r]</code>中有多少个数的约数个数是n。</p>
+<p>本题的重点在于如何快速求约数个数。</p>
+<p>约数个数公式：</p>
+<p><img src="/2018/11/29/math/1.png" alt></p>
+<p>我们发现这里用到了质因数分解。所以我们可以使用上一题的质因数分解来做。</p>
+<p>总时间复杂度<code>O(t(r-l)+nloglogn)</code>，最差情况下运算次数大约为$1×10^8$次，符合要求。</p>
+<p>更简便的做法：</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">10000000</span>; i++)<br>&#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i; j &lt;= <span class="hljs-number">10000000</span>; j += i)<br>        factors[j]++;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>乍一看，貌似会超时？</p>
+<p>这段代码的时间复杂度是<code>O(n logn)</code></p>
+<p>即总时间复杂度<code>O(t(r-l)+nlogn)</code>，最差情况下运算次数大约为$3.2×10^8$次，符合要求。</p>
+<h1 id="例4——2-x-mod-n-1-HDU-1395"><a href="#例4——2-x-mod-n-1-HDU-1395" class="headerlink" title="例4——2^x mod n = 1(HDU 1395)"></a>例4——2^x mod n = 1(HDU 1395)</h1><p>时间限制：1s  内存限制：64MB</p>
+<p><strong>题目描述</strong></p>
+<p>给定一个整数N，求最小的 x （x &gt; 0）使得$2^x  mod n=1$。</p>
+<p><strong>输入描述</strong></p>
+<p>输入包含多组测试用例，每个测试用例包含一个正整数N。</p>
+<p><strong>输出描述</strong></p>
+<p>若存在最小的 x，请输出<code>“2^xmod n = 1”</code>;否则输出<code>“2^?mod n = 1”</code>。</p>
+<table>
+<thead>
+<tr>
+<th>Sample Input</th>
+<th>Sample Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>2^? mod n = 1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2^4 mod 5 = 1</td>
+</tr>
+</tbody>
+</table>
+<p>此题暴力可A，不再赘述。（可能是数据水）</p>
+<p>但是数据一大，暴力就不行了。</p>
+<p>欧拉函数：$φ(n)——[1,n]$内与n互质的数的个数。</p>
+<ol>
+<li><p>当n为质数时，$φ(n)=n-1$。</p>
+</li>
+<li><p>当$n=p^k$时（p是素数），$φ(n)=φ(p^k )=p^k-p^{k-1}=(p-1)p^{k-1}$</p>
+</li>
+<li><p>若n,m互质，$φ(nm)=φ(n)φ(m)=(n-1)(m-1)$</p>
+</li>
+<li><p>若n是奇数，则$φ(2n)=φ(n)$</p>
+</li>
+</ol>
+<p>由上面的性质，我们可以写出求欧拉函数的一般式：</p>
+<p>我们设正整数n的唯一分解为$p_1^{a_1} p_2^{a_2 }…p_i^{a_i }$。其中，$ p_1,p_2,…,p_i$为素数。</p>
+<p>则我们可以得到：</p>
+<p><img src="/2018/11/29/math/oula.png" alt></p>
+<p>两个重要定理：</p>
+<ol>
+<li>当a与n互质时:<br>$$<br>𝑎^{𝜑(𝑛)}  𝑚𝑜𝑑 𝑛=1（欧拉定理）<br>$$</li>
+</ol>
+<ol start="2">
+<li>当a与n互质且n为质数时：<br>$$<br>𝑎^{𝑛−1}  𝑚𝑜𝑑 𝑛=1（费马小定理）<br>$$</li>
+</ol>
+<p>延伸：</p>
+<p>小于n且与n互质的数的和：<br>$$<br>\frac{φ(n)∗n}2  (n&gt;1)<br>$$<br>应用：</p>
+<p>求$7^{222}$的个位数。</p>
+<p>因为7和10互质，且$φ(10)=4$</p>
+<p>所以$7^4  mod 10=1$</p>
+<p>所以$7^{222}  mod 10=7^{4∗55}∗7^2  mod 10=7^2  mod 10=9$</p>
+<p>即$7^{222}  mod 10=7^{222\%4}  mod 10=7^2  mod 10=9$</p>
+<p>因为涉及唯一分解，那就与前面一样进行分解，边分解边计算即可。</p>
+<figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Euler</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span><br></span>&#123;<br>    <span class="hljs-keyword">int</span> ret = n;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-built_in">sqrt</span>(n); i++)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (n%i == <span class="hljs-number">0</span>)<br>        &#123;<br>            ret = ret * (i - <span class="hljs-number">1</span>) / i;<br>            <span class="hljs-keyword">while</span> (n%i == <span class="hljs-number">0</span>)<br>                n /= i;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">if</span> (n &gt; <span class="hljs-number">1</span>)<br>    ret = ret * (n - <span class="hljs-number">1</span>) / n;<br>    <span class="hljs-keyword">return</span> ret;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p><strong>解题——2^x mod n = 1</strong></p>
+<p>回到正题。</p>
+<p>首先，我们能确定n=1时肯定无解。</p>
+<p>对于n为偶数，我们知道$2^x$肯定是个偶数，那么模一个偶数的结果不可能是1。</p>
+<p>所以当n为偶数时同样无解。</p>
+<p>对于n为奇数，我们根据欧拉定理可以知道$φ(n)$是符合题目要求的一个数。所以n为奇数时一定有解。</p>
+<p>但是，题目要求x最小，但是$φ(n)$不一定是最小值。</p>
+<p>我们假设r是问题的解，即r是最小的x使得$2^x  \mod n=1$。</p>
+<p>那么对于其他的数X，若有$2^X \mod n=1$。</p>
+<p>那我们可以得到$X \mod  r=0$。</p>
+<p>所以，我们可以遍历$φ(n)$的所有因子就可以得到答案。</p>
+<h1 id="模运算"><a href="#模运算" class="headerlink" title="模运算"></a>模运算</h1><p>模运算的运算律：</p>
+<p>加法：</p>
+<p>$(a+b)\mod n=(a \mod n+b \mod n)\mod n$</p>
+<p>减法：</p>
+<p>$(a-b)\mod n=(a \mod n-b \mod n)\mod n$</p>
+<p>乘法：</p>
+<p>$(a∗b)\mod n=(a \mod n∗b \mod n)\mod n$</p>
+<p>幂：</p>
+<p>$a^b \mod n=(a \mod n)^b  mod n$</p>
+<p>注意！除法不成立。</p>
+<p>那么，如何计算$(a/b)\mod n$?</p>
+<p>我们可以通过将除b转换成乘b的逆元来解决，即$(a∗b^{-1} )\mod n$ 。</p>
+<h1 id="逆元"><a href="#逆元" class="headerlink" title="逆元"></a>逆元</h1><p>逆元的定义：</p>
+<p>$bc \mod p≡1$</p>
+<p>此时c称为b的逆元。</p>
+<p>容易知道，只有b和p互质的时候，c才有解；否则无解。</p>
+<p>那么c怎么求？</p>
+<p>联想费马小定理：</p>
+<p>$a^{n-1}  ≡1(mod n)$</p>
+<p>我们可以得到：</p>
+<p>$b∗b^{n-2}  ≡1(mod n)$</p>
+<p>即$c=b^{n-2} $ 。</p>
+<h1 id="推荐练习"><a href="#推荐练习" class="headerlink" title="推荐练习"></a>推荐练习</h1><table>
+<thead>
+<tr>
+<th>Codeforces</th>
+<th>洛谷</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>755A</td>
+<td>P1036</td>
+</tr>
+<tr>
+<td>948B</td>
+<td>P1075</td>
+</tr>
+<tr>
+<td>1047C</td>
+<td>P1125</td>
+</tr>
+<tr>
+<td>432C</td>
+<td>P1832</td>
+</tr>
+<tr>
+<td>236B</td>
+<td>P2398</td>
+</tr>
+<tr>
+<td>385C</td>
+<td>P3383</td>
+</tr>
+<tr>
+<td>151C</td>
+<td>P2424</td>
+</tr>
+<tr>
+<td>327C</td>
+<td>P1306</td>
+</tr>
+<tr>
+<td>615D</td>
+<td>P1405</td>
+</tr>
+<tr>
+<td></td>
+<td>P3811</td>
+</tr>
+</tbody>
+</table>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/数学/" rel="tag"><i class="fas fa-tags"></i>数学</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2018/11/08/bufenhe/" rel="next" title="部分和"><i class="fas fa-angle-left"></i><span class="nav-title">部分和</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2018/12/07/18lanqiaobei/" rel="prev" title="2018年蓝桥杯校内题选讲"><span class="nav-title">2018年蓝桥杯校内题选讲</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control">
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <h1 class="author-name">码到成功</h1>
+  <h2 class="author-description">除非你能在床上赚钱，否则就不要赖在床上</h2>
+  <div class="site-count">
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#例1——饥饿序列-Codeforces-327B"><span class="toc-text">例1——饥饿序列 (Codeforces 327B)</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#例2——士兵与数字游戏-Codeforces-546D"><span class="toc-text">例2——士兵与数字游戏(Codeforces 546D)</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#例3——密码486"><span class="toc-text">例3——密码486</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#例4——2-x-mod-n-1-HDU-1395"><span class="toc-text">例4——2^x mod n = 1(HDU 1395)</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#模运算"><span class="toc-text">模运算</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#逆元"><span class="toc-text">逆元</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#推荐练习"><span class="toc-text">推荐练习</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">码到成功</span><span class="year"><i class="far fa-copyright"></i>2020</span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
