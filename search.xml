@@ -305,6 +305,17 @@
     
     
     <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>categories</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -321,17 +332,6 @@
       <url>/about/index.html</url>
       
         <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>华广ACM集训队成立于2018年6月，截至2018年11月，共有成员13人，指导老师一位。</p><h1 id="现有组成"><a href="#现有组成" class="headerlink" title="现有组成"></a>现有组成</h1><p>指导老师韦婷<br>队长陈沛韩 尤家粵 李家隆<br>副队吴兆恒 肖锐</p><h1 id="昔日辉煌"><a href="#昔日辉煌" class="headerlink" title="昔日辉煌"></a>昔日辉煌</h1><h2 id="领导者"><a href="#领导者" class="headerlink" title="领导者"></a>领导者</h2><h3 id="队长尤家粤"><a href="#队长尤家粤" class="headerlink" title="队长尤家粤"></a>队长尤家粤</h3><p>曾获</p><ol><li>ACM省赛三等奖</li><li>蓝桥杯国赛二等奖</li><li>团体程序设计天梯赛省二等奖</li><li>校内模拟ACM三人组单人参赛一等奖</li></ol><h3 id="队长李家隆"><a href="#队长李家隆" class="headerlink" title="队长李家隆"></a>队长李家隆</h3><p>曾获</p><ol><li>ACM省赛三等奖</li><li>蓝桥杯省赛二等奖</li><li>团体程序设计天梯赛省二等奖</li></ol><h3 id="队长陈沛韩"><a href="#队长陈沛韩" class="headerlink" title="队长陈沛韩"></a>队长陈沛韩</h3><p>曾获</p><ol><li>团体程序设计天梯赛省二等奖</li><li>蓝桥杯省赛二等奖</li><li>天梯赛校内选拔赛一等奖</li><li>校内模拟ACM二等奖</li><li>校内蓝桥杯选拔赛一等奖</li></ol><h3 id="副队吴兆恒"><a href="#副队吴兆恒" class="headerlink" title="副队吴兆恒"></a>副队吴兆恒</h3><p>曾获</p><ol><li>团体程序设计天梯赛省二等奖</li><li>校内模拟ACM一等奖</li><li>天梯赛校内选拔赛三等奖</li></ol><h3 id="副队肖锐"><a href="#副队肖锐" class="headerlink" title="副队肖锐"></a>副队肖锐</h3><p>曾获</p><ol><li>校内模拟ACM二等奖</li><li>新生赛自由组二等奖</li></ol><h1 id="博客维护"><a href="#博客维护" class="headerlink" title="博客维护"></a>博客维护</h1><p>博客搭建于2018年11月底，目前由副队肖锐维护，有任何问题可发邮件至<code>1239776759＠qq.com</code></p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
